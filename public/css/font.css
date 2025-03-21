@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/solaimanlipi/SolaimanLipi_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/solaimanlipi/SolaimanLipi.ttf') format('truetype');
+}
+
+/* @font-face {
+  font-family: 'SolaimanLipi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: light;
+  src: url('solaimanlipi-thin-v1.0.woff2') format('woff2'),
+    url('solaimanlipi-thin-v1.0.ttf') format('truetype');
+} */
