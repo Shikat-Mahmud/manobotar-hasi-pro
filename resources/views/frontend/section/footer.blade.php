@@ -107,7 +107,7 @@
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                         </svg>
                                     </span>
-                                    <span class="txt">Event</span>
+                                    <span class="txt">আমাদের মিশন</span>
                                 </a>
                             </li>
                             <li>
@@ -127,7 +127,7 @@
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                         </svg>
                                     </span>
-                                    <span class="txt">Gallery</span>
+                                    <span class="txt">ছবি গ্যালারি</span>
                                 </a>
                             </li>
                             <li>
@@ -137,7 +137,7 @@
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                         </svg>
                                     </span>
-                                    <span class="txt">Donations</span>
+                                    <span class="txt">ডোনেশন</span>
                                 </a>
                             </li>
                             <li>
@@ -157,7 +157,7 @@
                                             <path d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z" class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                         </svg>
                                     </span>
-                                    <span class="txt">Contact</span>
+                                    <span class="txt">যোগাযোগ</span>
                                 </a>
                             </li>
                         </ul>

@@ -19,13 +19,13 @@
                 <div class="to-go-to-sidebar-in-mobile flex md:flex-col md:items-start items-center gap-[100px] xl:gap-[30px] md:gap-y-[15px]">
                     <!-- nav -->
                     <ul class="et-header-nav flex md:flex-col gap-x-[43px] xl:gap-x-[33px] font-kanit text-[17px] font-normal">
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ route('event.detail') }}">Event</a></li>
+                        <li><a href="{{ route('home') }}">হোম</a></li>
+                        <li><a href="{{ route('event.detail') }}">আমাদের মিশন</a></li>
                         <li><a href="{{ route('all.committee') }}">কমিটি</a></li>
-                        <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                        <li><a href="{{ route('our.doner') }}">Donations</a></li>
+                        <li><a href="{{ route('gallery') }}">ছবি গ্যালারি</a></li>
+                        <li><a href="{{ route('our.doner') }}">ডোনেশন</a></li>
                         <li><a href="{{ route('advisers') }}">উপদেষ্টা মণ্ডলী</a></li>
-                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                        <li><a href="{{ route('contact') }}">যোগাযোগ</a></li>
 
                         <!-- <li class="has-sub-menu relative">
                             <a role="button">Events</a>
