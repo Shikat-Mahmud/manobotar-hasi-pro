@@ -7,7 +7,7 @@
     <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
         <div class="text-center my-[30px] pt-[20px]">
             <div class="flex justify-center mb-[25px]">
-                <img style="height: 300px; width: auto;" src="{{asset('/')}}frontend/img/cca-app-mockup.png" alt="App">
+                <img style="height: 300px; width: auto;" src="{{asset('frontend/img/cca-app-mockup.png')}}" alt="App">
             </div>
 
             <div

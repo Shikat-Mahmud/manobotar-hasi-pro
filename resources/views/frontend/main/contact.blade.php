@@ -32,7 +32,7 @@
                                 class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
                                 <span
                                     class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                    <img src="{{ asset('/') }}frontend/img/call-msg.svg" alt="icon">
+                                    <img src="{{ asset('frontend/img/call-msg.svg') }}" alt="icon">
                                 </span>
 
                                 <div class="txt">
@@ -48,7 +48,7 @@
                                 class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
                                 <span
                                     class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                                    <img src="{{ asset('/') }}frontend/img/mail.svg" alt="icon">
+                                    <img src="{{ asset('frontend/img/mail.svg') }}" alt="icon">
                                 </span>
 
                                 <div class="txt">
@@ -65,7 +65,7 @@
                         class="flex flex-wrap items-center gap-[20px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
                         <span
                             class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
-                            <img src="{{ asset('/') }}frontend/img/location-dot-circle.svg" alt="icon">
+                            <img src="{{ asset('frontend/img/location-dot-circle.svg') }}" alt="icon">
                         </span>
 
                         <div class="txt">
@@ -84,7 +84,7 @@
                     @if (isset($event->image))
                         <img src="{{ asset('storage/' . $event->image) }}" alt="image cover" class="w-full">
                     @else
-                        <img src="{{ asset('/') }}frontend/img/contact-video-cover.jpg" alt="image cover"
+                        <img src="{{ asset('frontend/img/contact-video-cover.jpg') }}" alt="image cover"
                             class="w-full">
                     @endif
                 </div>

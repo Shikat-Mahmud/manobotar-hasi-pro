@@ -3,7 +3,7 @@
 @section('content')
 <!-- BANNER SECTION START -->
 <section class="et-2-banner relative bg-etBlue max-w-[1920px]"
-    style="background-image: url('{{asset('/')}}frontend/img/banner-2-bg-1.jpg');">
+    style="background-image: url('{{asset('frontend/img/banner-2-bg-1.jpg')}}');">
     <div class="swiper-wrapper">
         <!-- single slide -->
         <div
@@ -52,12 +52,12 @@
 
             <!-- vectors -->
             <div class="et-banner-vectors">
-                <div class="absolute left-[26px] top-[235px]"><img src="{{asset('/')}}frontend/img/team-vector.png"
+                <div class="absolute left-[26px] top-[235px]"><img src="{{asset('frontend/img/team-vector.png')}}"
                         alt="vector" class="w-[50px] !animate-none !rotate-0 md:hidden"></div>
                 <div class="absolute bottom-[352px] left-[845px]"><img
-                        src="{{asset('/')}}frontend/img/banner-vector.png" alt="vector"></div>
+                        src="{{asset('frontend/img/banner-vector.png')}}" alt="vector"></div>
                 <div class="absolute top-[214px] right-[190px]"><img
-                        src="{{asset('/')}}frontend/img/banner-vector-2.png" alt="vector" class="w-[21px] h-[21px]">
+                        src="{{asset('frontend/img/banner-vector-2.png')}}" alt="vector" class="w-[21px] h-[21px]">
                 </div>
             </div>
         </div>
@@ -77,16 +77,16 @@
                 @if (isset($event->image))
                     <img src="{{ asset('storage/' . $event->image) }}" alt="image" class="shrink-0 rounded-[50px]" />
                 @else
-                    <img src="{{asset('/')}}frontend/img/about-2-img.png" alt="image" class="shrink-0 rounded-[50px]" />
+                    <img src="{{asset('frontend/img/about-2-img.png')}}" alt="image" class="shrink-0 rounded-[50px]" />
                 @endif
-                <img src="{{asset('/')}}frontend/img/about-2-img-2.jpg" alt="image"
+                <img src="{{asset('frontend/img/about-2-img-2.jpg')}}" alt="image"
                     class="et-about-floating-img absolute top-[55px] -left-[124px] shrink-0 rounded-[20px] border-white border-[10px] shadow-[0_4px_40px_0_rgba(0,0,0,0.1)] xs:hidden" />
 
                 <!-- vectors -->
                 <div class="et-about-vectors">
-                    <img src="{{asset('/')}}frontend/img/about-img-vector-4.png" alt="vector"
+                    <img src="{{asset('frontend/img/about-img-vector-4.png')}}" alt="vector"
                         class="et-about-vector-1 absolute -left-[98px] top-[20px] -z-[1] xxs:hidden" />
-                    <img src="{{asset('/')}}frontend/img/team-vector.png" alt="vector"
+                    <img src="{{asset('frontend/img/team-vector.png')}}" alt="vector"
                         class="et-about-vector-2 w-[50px] absolute -left-[70px] bottom-[115px] -z-[1] !animate-none" />
                 </div>
             </div>
@@ -162,7 +162,7 @@
 <!-- EVENT SCHEDULE SECTION START -->
 @if ($event_schedule->isNotEmpty())
 <div class="bg-[#00339A] relative z-[1] after:absolute after:inset-0 after:bg-no-repeat after:bg-cover after:-z-[2] after:pointer-events-none after:opacity-50 pb-[130px] xl:pb-[80px] md:pb-[60px] pt-[60px] xl:pt-[60px] md:pt-[54px]"
-    style="background-image: url('{{asset('/')}}frontend/img/features-bg.jpg');">
+    style="background-image: url('{{asset('frontend/img/features-bg.jpg')}}');">
     <div
         class="container mx-auto max-w-[calc(100%-37.1vw)] xxxl:max-w-[calc(100%-350px)] xl:max-w-[calc(100%-170px)] px-[12px] lg:max-w-full rev-slide-up">
         <!-- heading -->
@@ -181,7 +181,7 @@
                     <!-- icon -->
                     <div
                         class="w-[102px] aspect-square border-[10px] bg-etBlue border-[#EDF3FE] rounded-full flex items-center justify-center mb-[20px]">
-                        <img src="{{asset('/')}}frontend/img/clock.png" alt="Feature icon"
+                        <img src="{{asset('frontend/img/clock.png')}}" alt="Feature icon"
                             class="transition duration-[0.4s] group-hover:-scale-x-100">
                     </div>
 
@@ -203,7 +203,7 @@
 
     <!-- vectors -->
     <div>
-        <img src="{{asset('/')}}frontend/img/stats-vector-2.png" alt="vector"
+        <img src="{{asset('frontend/img/stats-vector-2.png')}}" alt="vector"
             class="pointer-events-none absolute top-[85px] right-[67px] -z-[1] opacity-10">
     </div>
 </div>
@@ -255,7 +255,7 @@
                                 @if (isset($review->photo))
                                     <img src="{{asset('storage/' . $review->photo)}}" alt="reviewer image" class="w-[100px] object-cover sm:w-[80px] h-[100px] sm:h-[80px] rounded-full">
                                 @else
-                                    <img src="{{asset('/')}}frontend/img/user_avatar.png" alt="reviewer image" class="w-[100px]  object-cover sm:w-[80px] h-[100px] sm:h-[80px] rounded-full">
+                                    <img src="{{asset('frontend/img/user_avatar.png')}}" alt="reviewer image" class="w-[100px]  object-cover sm:w-[80px] h-[100px] sm:h-[80px] rounded-full">
                                 @endif
                             </div>
                         </div>
@@ -270,7 +270,7 @@
 
                         <!-- quotation icon -->
                         <div class="absolute top-[40px] sm:top-[20px] left-[40px] sm:left-[20px]">
-                            <img src="{{asset('/')}}frontend/img/quotation-blue.svg" alt="quotation mark">
+                            <img src="{{asset('frontend/img/quotation-blue.svg')}}" alt="quotation mark">
                         </div>
                     </div>
                 </div>

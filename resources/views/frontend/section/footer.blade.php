@@ -13,7 +13,7 @@
         <div class="et-footer-top pt-[130px] xl:pt-[80px] pb-[60px]">
             <!-- contact infos -->
             <div class="bg-etBlue py-[35px] px-[40px] xl:px-[30px] rounded-[20px] mb-[60px] overflow-hidden relative z-[1] flex lg:flex-wrap justify-between lg:justify-center xs:justify-start items-center gap-[20px] before:absolute before:-z-[1] before:inset-0 before:opacity-40 before:mix-blend-multiply"
-                style="background-image: url('{{ asset('/') }}frontend/img/et-counter-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                style="background-image: url('{{ asset('frontend/img/et-counter-bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <!-- single info -->
                 <div class="flex xxs:flex-col items-center xxs:items-start gap-[15px] xxs:gap-[10px]">
                     <!-- icon -->
