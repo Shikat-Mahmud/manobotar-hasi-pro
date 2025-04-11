@@ -61,7 +61,7 @@
 
                 <h2 class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-medium text-etBlack mb-[7px]">
                     Register For The Event </h2>
-                <p class="text-etGray font-light text-[16px] font-semibold">Registration fees:</p>
+                <p class="text-etGray text-[16px] font-semibold">Registration fees:</p>
                 
                 <ul class="mt-[10px] text-[12px] font-light text-etGray reg-ul">
                     <li class="reg-li"><i class="fas fa-check-circle text-etBlue"></i> Ex-students: 1000/-</li>
