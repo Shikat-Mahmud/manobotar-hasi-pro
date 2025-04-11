@@ -31,8 +31,8 @@
                     <!-- txt -->
                     <div>
                         <span class="block font-medium text-[14px]">হেড অফিস</span>
-                        @if (isset($setting->business_location))
-                            <h5 class="font-medium text-[20px]">{{ $setting->business_location }}</h5>
+                        @if (isset($setting->business_address))
+                            <h5 class="font-medium text-[20px]">{{ $setting->business_address }}</h5>
                         @else
                             <h5 class="font-medium text-[20px]">বালি মসজিদ, দুর্গাপুর, বেগমগঞ্জ, নোয়াখালী।</h5>
                         @endif
