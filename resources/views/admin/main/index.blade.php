@@ -49,29 +49,29 @@
                 <div class="col-md-6 col-xl-6 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
-                            <h6 class="mb-0 text-white mb-3">Total Students<span class="float-end text-white h4">{{ $totalStudent }}</span></h6>
-                            <h6 class="mb-0 text-white mb-3">Total Ex Students<span class="float-end text-white h4">{{ $totalExStudent }}</span></h6>
-                            <h6 class="mb-0 text-white mb-3">Total Present Students<span class="float-end text-white h4">{{ $totalPresentStudent }}</span></h6>
+                            <h6 class="text-white mb-3">Total Students<span class="float-end text-white h4">{{ $totalStudent }}</span></h6>
+                            <h6 class="text-white mb-3">Total Ex Students<span class="float-end text-white h4">{{ $totalExStudent }}</span></h6>
+                            <h6 class="text-white mb-3">Total Present Students<span class="float-end text-white h4">{{ $totalPresentStudent }}</span></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-6 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
-                            <h6 class="mb-0 text-white mb-3">Total Teachers<span class="float-end text-white h4">{{ $totalTeachers }}</span></h6>
-                            <h6 class="mb-0 text-white mb-3">Total Staffs<span class="float-end text-white h4">{{ $totalStaffs }}</span></h6>
-                            <h6 class="mb-0 text-white mb-3">Total Guests<span class="float-end text-white h4">{{ $totalGuest }}</span></h6>
+                            <h6 class="text-white mb-3">Total Teachers<span class="float-end text-white h4">{{ $totalTeachers }}</span></h6>
+                            <h6 class="text-white mb-3">Total Staffs<span class="float-end text-white h4">{{ $totalStaffs }}</span></h6>
+                            <h6 class="text-white mb-3">Total Guests<span class="float-end text-white h4">{{ $totalGuest }}</span></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Amount Received From Registration</h6>
@@ -87,7 +87,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Amount Received From Donation</h6>
@@ -101,7 +101,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Amount Received From Sponsor</h6>
@@ -115,7 +115,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #008375;">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Total Amount Received</h6>
@@ -129,7 +129,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #ff4261;">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Total Investment</h6>
@@ -143,7 +143,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1 bg-warning">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Total Cash In Hand</h6>
@@ -158,7 +158,7 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #65467a;">
                         <div class="card-body">
-                            <img src="{{ asset('/')}}images/widget/img-status-6.svg"
+                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
                                 alt="img" class="img-fluid img-bg">
                             <div class="d-flex align-items-center">
                                 <h4 class="text-white f-w-300 d-flex align-items-center">Paid Registrations</h4>
@@ -199,7 +199,7 @@
                                                     <img src="{{ asset('storage/' . $item->photo) }}" alt="Reviewer Image"
                                                         style="height: 50px; border-radius: 6px;">
                                                 @else
-                                                    <img src="{{ asset('/assets/images/user/avatar-2.jpg') }}" alt="Default Image"
+                                                    <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Default Image"
                                                         style="height: 50px; border-radius: 6px;">
                                                 @endif
                                             </td>
