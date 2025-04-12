@@ -40,6 +40,11 @@
                 @endif --}}
 
                 <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('blood-doner.list') }}" class="pc-link"><span class="pc-micon">
+                            <i class="ph ph-drop"></i></span><span class="pc-mtext">রক্তদাতা তালিকা</span></a>
+                </li>
+
+                <li class="pc-item pc-hasmenu">
                     <a href="{{ route('adviser.list') }}" class="pc-link"><span class="pc-micon">
                             <i class="ph ph-users"></i></span><span class="pc-mtext">উপদেষ্টা মণ্ডলী</span></a>
                 </li>

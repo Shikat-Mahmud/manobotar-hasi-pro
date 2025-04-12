@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\AdviserController;
+use App\Http\Controllers\backend\BloodDonerController;
 use App\Http\Controllers\backend\CommitteeController;
 use App\Http\Controllers\backend\DonationController;
 use App\Http\Controllers\backend\EventController;
@@ -135,6 +136,22 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/advisers', [AdviserController::class, 'index'])->name('advisers');
 // all adviser route end //
+
+
+// all blood doner route start //
+Route::middleware('auth')->group(function () {
+    Route::get('/blood-doner-list', [BloodDonerController::class, 'list'])->name('blood-doner.list');
+    Route::get('/add-blood-doner', [BloodDonerController::class, 'create'])->name('create.blood-doner');
+    Route::post('/store-blood-doner', [BloodDonerController::class, 'store'])->name('store.blood-doner');
+    Route::get('/edit-blood-doner/{id}', [BloodDonerController::class, 'edit'])->name('edit.blood-doner');
+    Route::post('/update-blood-doner/{id}', [BloodDonerController::class, 'update'])->name('update.blood-doner');
+    Route::post('/destroy-blood-doner/{id}', [BloodDonerController::class, 'destroy'])->name('destroy.blood-doner');
+    Route::get('/show-blood-doner/{id}', [BloodDonerController::class, 'show'])->name('show.blood-doner');
+    Route::get('/blood-doner-status/{id}', [BloodDonerController::class, 'changeStatus'])->name('blood-doner.status');
+});
+
+Route::get('/blood-doners', [BloodDonerController::class, 'index'])->name('blood-doners');
+// all blood doner route end //
 
 
 // all register route start //
