@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'User Details')
+@section('title', 'ইউজারের তথ্য')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -8,12 +8,12 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h4>User Details</h4>
+                            <h4>ইউজারের তথ্য</h4>
 
                         </div>
                         <div>
                             <a href="{{ route('admin.users.index') }}" class="btn btn-primary btn-sm"><i
-                                    class="fas fa-arrow-left mr-2 "></i> User List</a>
+                                    class="fas fa-arrow-left mr-2 "></i> ইউজারের তালিকা</a>
                         </div>
                     </div>
                     <div class="card-body text-center">
@@ -22,14 +22,14 @@
                             <img src="{{ asset('storage/' . $user->photo) }}" alt="Photo" class="rounded-circle"
                                 style="height: 100px; width: 100px; object-fit: cover; border: 3px solid #23B7E5; padding: 2px;">
                             @else
-                            <img src="{{ asset('/assets/images/user/avatar-2.jpg') }}" class="img-radius mb-4"
+                            <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" class="img-radius mb-4"
                                 alt="User-Profile-Image">
                             @endif
                         </div>
 
                         <div class="d-flex justify-content-center">
                             <div>
-                                <span style="font-size: 18px;">Name: </span>
+                                <span style="font-size: 18px;">নামঃ </span>
                             </div>
                             <div>
                                 <span style="font-size: 18px; margin-left: 5px;" class="ml-3"><b>{{ $user->name
@@ -38,7 +38,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <div>
-                                <span style="font-size: 18px;">Email: </span>
+                                <span style="font-size: 18px;">ইমেইলঃ </span>
                             </div>
                             <div>
                                 <span style="font-size: 18px; margin-left: 5px;" class="ml-3"><b>{{ $user->email
@@ -48,7 +48,7 @@
 
                         <div class="d-flex justify-content-center">
                             <div>
-                                <span style="font-size: 18px;">Role: </span>
+                                <span style="font-size: 18px;">রোলঃ </span>
                             </div>
                             <div>
                                 <span style="font-size: 18px; margin-left: 5px;" class="ml-3">

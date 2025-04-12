@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Contact List')
+@section('title', 'যোগাযোগের তালিকা')
 @push('styles')
     <style>
         .desc-box {
@@ -16,7 +16,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            All Contacts
+                            যোগাযোগের তালিকা
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -24,10 +24,10 @@
                             <table class="table" id="example" style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Message</th>
-                                        <th>Action</th>
+                                        <th>নাম</th>
+                                        <th>ইমেইল</th>
+                                        <th>মেসেজ</th>
+                                        <th>একশন</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -37,7 +37,7 @@
                                             <td>{{ $item->email }}</td>
                                             <td class="desc-box">{{ $item->message }}</td>
                                             <td>
-                                                <a class="btn btn-info btn-sm me-2" href="{{ route('contact.view', $item->id) }}">View</a>
+                                                <a class="btn btn-info btn-sm me-2" href="{{ route('contact.view', $item->id) }}"><i class="ph ph-eye"></i> দেখুন</a>
                                             </td>
                                         </tr>
                                     @endforeach

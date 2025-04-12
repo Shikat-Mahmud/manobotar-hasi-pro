@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Admin Panel')
+@section('title', 'এডমিন ড্যাশবোর্ড')
 @section('content')
     <div class="pc-container">
         <div class="pc-content">

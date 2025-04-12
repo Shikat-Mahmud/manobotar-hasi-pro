@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Reviews')
+@section('title', 'রিভিউ তালিকা')
 @push('styles')
     <style>
         .desc-box {
@@ -16,7 +16,7 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            All Reviews
+                            রিভিউ তালিকা
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -24,11 +24,10 @@
                             <table class="table" id="example" style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>Reviewer Name</th>
-                                        <th>Reviewer Photo</th>
-                                        <th>Reviewer Batch</th>
-                                        <th>Message</th>
-                                        <th>Show/Hide</th>
+                                        <th>রিভিউকারীর নাম</th>
+                                        <th>রিভিউকারীর ছবি</th>
+                                        <th>মেসেজ</th>
+                                        <th>ওয়েবসাইটে দেখান</th>
                                     </tr>
                                 </thead>
                                 <tbody>

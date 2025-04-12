@@ -3,7 +3,7 @@
 
 
 <head>
-    <title>Admin Login</title>
+    <title>এডমিন লগইন</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -15,10 +15,10 @@
     <link rel="icon" href="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/images/favicon.ico"
         type="image/x-icon">
 
-    <link rel="stylesheet" href="{{ asset('/assets/fonts/fontawesome/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome/css/fontawesome-all.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('/assets/plugins/animation/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/animation/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -52,19 +52,19 @@
                             @endif
                             </a>
                         </div>
-                        <h3 class="mb-4">Admin Login</h3>
+                        <h3 class="mb-4">এডমিন লগইন</h3>
                         <div class="mt-3">
                             <x-text-input id="email" class="form-control" type="email" name="email"
-                                :value="old('email')" required autofocus autocomplete="username" placeholder="Email" />
+                                :value="old('email')" required autofocus autocomplete="username" placeholder="ইমেইল" />
                             <x-input-error :messages="$errors->get('email')" class="mt-2" style="color: #FF0000;" />
                         </div>
                         <div class="mt-4">
                             <x-text-input id="password" class="form-control" type="password" name="password" required
-                                autocomplete="current-password" placeholder="Password" />
+                                autocomplete="current-password" placeholder="পাসওয়ার্ড" />
                             <x-input-error :messages="$errors->get('password')" class="mt-2" style="color: #FF0000;" />
                         </div>
                         <br>
-                        <button class="btn btn-primary shadow-2 mb-4">Login</button>
+                        <button class="btn btn-primary shadow-2 mb-4">লগইন</button>
                         <!-- <p class="mb-2 text-muted">
                             @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -74,7 +74,7 @@
                             @endif
                         </p> -->
                         <!-- <p class="mb-0 text-muted">Don’t have an account? <a href="{{ route('register') }}">Signup</a></p> -->
-                        <p class="mb-0 text-muted"><span class="text-danger">*</span> Only For Admin Login</p>
+                        <p class="mb-0 text-muted"><span class="text-danger">*</span> শুধুমাত্র এডমিন লগইনের জন্য</p>
                     </div>
                 </div>
             </div>

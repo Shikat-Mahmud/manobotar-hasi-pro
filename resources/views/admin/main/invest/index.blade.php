@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Investment List')
+@section('title', 'খরচের তালিকা')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -9,10 +9,10 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            Invest List
+                            খরচের তালিকা
                         </div>
                         <div>
-                            <a href="{{ route('create.investment') }}" class="btn btn-primary btn-sm">Add investment</a>
+                            <a href="{{ route('create.investment') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন খরচ</a>
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -20,10 +20,10 @@
                             <table class="table" id="example"  style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>investment Sector</th>
-                                        <th>Invested By Person</th>
-                                        <th>Invested Amount</th>
-                                        <th>Action</th>
+                                        <th>খরচের খাত</th>
+                                        <th>খরচকারীর নাম</th>
+                                        <th>খরচের পরিমাণ</th>
+                                        <th>একশন</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -34,10 +34,10 @@
                                         <td>&#2547; {{ $invest->amount }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a class="btn btn-info btn-sm me-2" href="{{ route('edit.investment', $invest->id) }}">Edit</a>
+                                                <a class="btn btn-info btn-sm me-2" href="{{ route('edit.investment', $invest->id) }}"><i class="ph ph-pencil"></i> এডিট</a>
                                                 <form class="deleteForm" action="{{ route('destroy.investment', $invest->id) }}" method="post">
                                                     @csrf
-                                                    <button type="button" class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                    <button type="button" class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
                                                 </form>
                                             </div>
                                         </td>

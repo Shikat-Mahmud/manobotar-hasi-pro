@@ -30,7 +30,7 @@ class ContactController extends Controller
             $contact->fill($inputs);
             $contact->save();
 
-            return redirect()->back()->with('success', 'Contact form submitted successfully.');
+            return redirect()->back()->with('success', 'আপনার বার্তা সফলভাবে পাঠানো হয়েছে।');
         } catch (\Exception $e) {
             return redirect()->back()->withInput()->with('error', $e->getMessage());
         }

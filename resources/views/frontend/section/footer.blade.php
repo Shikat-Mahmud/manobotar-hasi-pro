@@ -1,6 +1,5 @@
 @php
     $setting = generalSettings();
-    $myevent = myEvent();
 @endphp
 <!-- FOOTER SECTION START -->
 <footer
@@ -94,7 +93,7 @@
 
                     <!-- txt -->
                     <div>
-                        <span class="block font-medium text-[14px]">ইমার্জেন্সি কল</span>
+                        <span class="block font-medium text-[14px]">জরুরী কল</span>
                         <h5 class="font-medium text-[20px]"><a
                                 href="tel:{{ $setting->business_number }}">{{ $setting->business_number }}</a></h5>
                     </div>

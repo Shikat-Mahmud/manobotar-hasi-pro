@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Role List')
+@section('title', 'রোল সমূহ')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -9,12 +9,11 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            Role List
+                            রোল সমূহ
                         </div>
                         @if (auth()->check() && auth()->user()->hasPermissionTo('create-role'))
                         <div>
-                            <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm">Create new Role
-                            </a>
+                            <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন রোল</a>
                         </div>
                         @endif
                     </div>
@@ -23,8 +22,8 @@
 
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th></th>
+                                    <th>নাম</th>
+                                    <th>একশন</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,7 +37,7 @@
 
                                             @if (auth()->check() && auth()->user()->hasPermissionTo('edit-role'))
                                             <a class="btn btn-info btn-sm me-2"
-                                                href="{{ route('admin.roles.edit', $item->id) }}">Edit</a>
+                                                href="{{ route('admin.roles.edit', $item->id) }}"><i class="ph ph-pencil"></i> এডিট</a>
                                             @endif
 
                                             @if (auth()->check() && auth()->user()->hasPermissionTo('delete-role'))
@@ -48,7 +47,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button"
-                                                    class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                    class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
                                             </form>
                                             @elseif ($item->name !== 'admin')
                                             <form class="deleteForm"
@@ -56,7 +55,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button"
-                                                    class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                    class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
                                             </form>
                                             @endif
                                             @endif

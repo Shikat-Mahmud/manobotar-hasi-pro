@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'User Role')
+@section('title', 'ইউজারের রোল')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -8,12 +8,12 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h4>User Information</h4>
+                            <h4>ইউজারের তথ্য</h4>
 
                         </div>
                         <div>
                             <a href="{{ route('admin.users.index') }}" class="btn btn-primary btn-sm"><i
-                                    class="fas fa-arrow-left mr-2 "></i> User List</a>
+                                    class="fas fa-arrow-left mr-2 "></i> ইউজারের তালিকা</a>
                         </div>
                     </div>
 
@@ -29,7 +29,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <div>
-                                <span style="font-size: 18px;">Name: </span>
+                                <span style="font-size: 18px;">নামঃ </span>
                             </div>
                             <div>
                                 <span style="font-size: 18px; margin-left: 5px;" class="ml-3"><b>{{ $user->name
@@ -38,15 +38,13 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <div>
-                                <span style="font-size: 18px;">Email: </span>
+                                <span style="font-size: 18px;">ইমেইলঃ </span>
                             </div>
                             <div>
                                 <span style="font-size: 18px; margin-left: 5px;" class="ml-3"><b>{{ $user->email
                                         }}</b></span>
                             </div>
                         </div>
-
-
                         <br>
                     </div>
 
@@ -54,7 +52,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="text-center">User Roles</h3>
+                        <h3 class="text-center">ইউজারের রোল সমূহ</h3>
                     </div>
 
                     <div class="card-body">
@@ -71,7 +69,7 @@
                             </div>
                             @endforeach
                             @else()
-                            <p class="ml-3"> &#128532; There is no role found for this user.</p>
+                            <p class="ml-3"> &#128532; এই ইউজারের কোনো রোল পাওয়া যায়নি!</p>
                             @endif
                         </div>
                     </div>
@@ -80,7 +78,7 @@
                         <form action="{{ route('admin.users.roles', $user->id) }}" method="post">
                             @csrf
                             <div class="row mt-3">
-                                <label class="col-md-4">Roles:</label>
+                                <label class="col-md-4">রোল সমূহঃ </label>
                                 <div class="col-md-8">
                                     @foreach ($roles as $role)
                                     @if($role->name !== 'super_admin')
@@ -100,16 +98,13 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-4">
-                                    <input type="submit" value="Assign" class="btn btn-success">
+                                    <input type="submit" value="প্রদান করুন" class="btn btn-success">
                                 </div>
                             </div>
                         </form>
-
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </section>

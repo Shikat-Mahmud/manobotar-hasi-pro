@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Edit Role')
+@section('title', 'রোল এডিট করুন')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -8,12 +8,12 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h4>Edit Role</h4>
+                            <h4>রোল এডিট করুন</h4>
 
                         </div>
                         <div>
                             <a href="{{ route('admin.roles.index') }}" class="btn btn-primary btn-sm"><i
-                                    class="fas fa-arrow-left mr-2 "></i> Role List</a>
+                                    class="fas fa-arrow-left mr-2 "></i> রোল তালিকা</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -21,10 +21,10 @@
                             @csrf
                             @method('PUT')
                             <div class="row mt-3">
-                                <label for="name" class="col-md-4" required>Role Name: </label>
+                                <label for="name" class="col-md-4" required>রোলের নামঃ </label>
                                 <div class="col-md-8">
                                     @if ($role->name !== 'super_admin' && $role->name !== 'admin')
-                                    <input type="text" name="name" value="{{ $role->name }}" class="form-control" />
+                                    <input type="text" name="name" value="{{ $role->name }}" class="form-control" placeholder="রোলের নাম" />
                                     @else
                                     <input type="text" name="name" value="{{ $role->name }}" class="form-control"
                                         readonly />
@@ -34,7 +34,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-4 ">
-                                    <input type="submit" value="Update" class="btn btn-success">
+                                    <input type="submit" value="আপডেট" class="btn btn-success">
                                 </div>
                             </div>
                         </form>
@@ -43,7 +43,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="text-center">Role Permissions</h3>
+                        <h3 class="text-center">রোলের পারমিশন সমূহ</h3>
                     </div>
 
                     <div class="card-body">
@@ -60,7 +60,7 @@
                             </div>
                             @endforeach
                             @else
-                            <p class="ml-3"> &#128532; There is no permission found for this role.</p>
+                            <p class="ml-3"> &#128532; এই রোলের কোনো পারমিশন পাওয়া যায়নি! </p>
                             @endif
                         </div>
                     </div>
@@ -73,17 +73,17 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Permission Type</th>
-                                            <th scope="col">View </th>
-                                            <th scope="col">Create </th>
-                                            <th scope="col">Edit </th>
-                                            <th scope="col">Delete </th>
+                                            <th scope="col">পারমিশনের ধরণ</th>
+                                            <th scope="col">ভিউ </th>
+                                            <th scope="col">অ্যাড </th>
+                                            <th scope="col">এডিট </th>
+                                            <th scope="col">ডিলিট </th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <tr>
-                                            <td>User </td>
+                                            <td>ইউজার </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
                                                     value="show-user" {{ $role->hasPermissionTo('show-user') ? 'checked'
@@ -107,7 +107,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Role </td>
+                                            <td>রোল </td>
                                             <td>
 
                                             </td>
@@ -129,7 +129,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>General Settings </td>
+                                            <td>সাধারণ সেটিংস </td>
                                             <td>
 
                                             </td>
@@ -147,7 +147,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Email Settings </td>
+                                            <td>ইমেইল সেটিংস </td>
                                             <td>
 
                                             </td>
@@ -165,7 +165,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Admin Panel </td>
+                                            <td>এডমিন প্যানেল </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
                                                     value="admin-panel" {{ $role->hasPermissionTo('admin-panel') ?
@@ -182,7 +182,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Cache Clear </td>
+                                            <td>ক্যাশ পরিষ্কার </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
                                                     value="cache-clear" {{ $role->hasPermissionTo('cache-clear') ?
@@ -205,7 +205,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-4">
-                                    <input type="submit" value="Assign" class="btn btn-success">
+                                    <input type="submit" value="প্রদান করুন" class="btn btn-success">
                                 </div>
                             </div>
                         </form>

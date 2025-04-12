@@ -1,9 +1,15 @@
 @extends('frontend.master')
 @section('title', 'মানবতার হাসি ফাউন্ডেশন')
 @section('content')
+
+@php
+    $setting = generalSettings();
+@endphp
 <!-- BANNER SECTION START -->
 <section class="et-2-banner relative bg-etBlue max-w-[1920px]"
     style="background-image: url('{{asset('frontend/img/banner-2-bg-1.jpg')}}');">
+    {{-- style="background-image: url('{{asset({{ $setting->banner_image ? `storage/ . $setting->banner_image` : 'frontend/img/banner-2-bg-1.jpg' }})}}');"> --}}
+
     <div class="swiper-wrapper">
         <!-- single slide -->
         <div

@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Events')
+@section('title', 'উদ্যোগ সমূহ')
 @push('styles')
     <style>
         .desc-box {
@@ -16,12 +16,10 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            Event List
+                            উদ্যোগ সমূহ
                         </div>
                         <div>
-                            <a href="{{ route('create.event') }}" class="btn btn-primary btn-sm">Create new
-                                Event
-                            </a>
+                            <a href="{{ route('create.event') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন উদ্যোগ</a>
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -29,19 +27,17 @@
                             <table class="table" id="example" style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>Date and Time</th>
-                                        <th>Image</th>
-                                        <th>Location</th>
-                                        <th>Description</th>
-                                        <th>Action</th>
+                                        <th>উদ্যোগের নাম</th>
+                                        {{-- <th>লোগো</th> --}}
+                                        <th>ছবি</th>
+                                        <th>বিস্তারিত তথ্য</th>
+                                        <th>একশন</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($events as $item)
                                         <tr>
                                             <td>{{ $item->name }}</td>
-                                            <td>{{ \Carbon\Carbon::parse($item->datetime)->format('d-M-Y g:i A') }}</td>
                                             <td>
                                                 @if ($item->image)
                                                     <img src="{{ asset('storage/' . $item->image) }}" alt="Event Image"
@@ -51,17 +47,16 @@
                                                         style="height: 50px; border-radius: 6px;">
                                                 @endif
                                             </td>
-                                            <td class="desc-box">{{ $item->location }}</td>
                                             <td class="desc-box">{{ $item->description }}</td>
                                             <td>
                                                 <div class="d-flex">
                                                     <a class="btn btn-info btn-sm me-2"
-                                                        href="{{ route('edit.event', $item->id) }}">Edit</a>
+                                                        href="{{ route('edit.event', $item->id) }}"><i class="ph ph-pencil"></i> এডিট</a>
                                                     <form class="deleteForm"
                                                         action="{{ route('destroy.event', $item->id) }}" method="post">
                                                         @csrf
                                                         <button type="button"
-                                                            class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                            class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
                                                     </form>
                                                 </div>
                                             </td>

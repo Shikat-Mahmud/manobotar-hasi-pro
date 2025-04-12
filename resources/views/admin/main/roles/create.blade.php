@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Add Role')
+@section('title', 'নতুন রোল')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -8,12 +8,12 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h4>Add Role</h4>
+                            <h4>নতুন রোল</h4>
 
                         </div>
                         <div>
                             <a href="{{ route('admin.roles.index') }}" class="btn btn-primary btn-sm"><i
-                                    class="fas fa-arrow-left mr-2 "></i> Role List</a>
+                                    class="fas fa-arrow-left mr-2 "></i> রোলের তালিকা</a>
                         </div>
                     </div>
 
@@ -21,10 +21,10 @@
                         <form action="{{ route('admin.roles.store') }}" method="post">
                             @csrf
                             <div class="row mt-3">
-                                <label for="" class="col-md-4" required>Role Name <span
+                                <label for="" class="col-md-4" required>রোলের নামঃ <span
                                         class="text-danger">*</span></label>
                                 <div class="col-md-8">
-                                    <input type="text" name="name" class="form-control" placeholder="Role Name"/>
+                                    <input type="text" name="name" class="form-control" placeholder="রোলের নাম"/>
                                 </div>
                             </div>
 
@@ -32,17 +32,17 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Permission Type</th>
-                                            <th scope="col">View </th>
-                                            <th scope="col">Create </th>
-                                            <th scope="col">Edit </th>
-                                            <th scope="col">Delete </th>
+                                            <th scope="col">পারমিশনের ধরণ</th>
+                                            <th scope="col">ভিউ </th>
+                                            <th scope="col">অ্যাড </th>
+                                            <th scope="col">এডিট </th>
+                                            <th scope="col">ডিলিট </th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <tr>
-                                            <td>User </td>
+                                            <td>ইউজার </td>
                                             <td>
                                                 <input type="checkbox" name="permissions[]" value="show-user"
                                                     class="form-check-input">
@@ -62,7 +62,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Role </td>
+                                            <td>রোল </td>
                                             <td>
 
                                             </td>
@@ -81,7 +81,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>General Settings </td>
+                                            <td>সাধারণ সেটিংস </td>
                                             <td>
 
                                             </td>
@@ -97,7 +97,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Email Settings </td>
+                                            <td>ইমেইল সেটিংস </td>
                                             <td>
 
                                             </td>
@@ -113,7 +113,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Admin Panel <span class="text-danger">*</span></td>
+                                            <td>এডমিন প্যানেল <span class="text-danger">*</span></td>
                                             <td>
                                                 <input type="checkbox" name="permissions[]" value="admin-panel"
                                                     class="form-check-input" checked required >
@@ -129,7 +129,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Cache Clear </td>
+                                            <td>ক্যাশ পরিষ্কার </td>
                                             <td>
                                                 <input type="checkbox" name="permissions[]" value="cache-clear"
                                                     class="form-check-input">
@@ -151,7 +151,7 @@
 
                             <div class="row mt-3">
                                 <div class="col-md-4 ">
-                                    <input type="submit" value="Create" class="btn btn-success">
+                                    <input type="submit" value="সাবমিট" class="btn btn-success">
                                 </div>
                             </div>
                         </form>
