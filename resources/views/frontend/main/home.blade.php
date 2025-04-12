@@ -292,8 +292,8 @@
         <div class="container mx-auto max-w-[calc(100%-37.1vw)] xxxl:max-w-[calc(100%-350px)] xl:max-w-[calc(100%-170px)] px-[12px] lg:max-w-full">
             <!-- heading -->
             <div class="text-center mb-[52px] xl:mb-[42px] md:mb-[32px]">
-                <h6 class="et-section-sub-title anim-text">Sponsors & Exhibitors</h6>
-                <h2 class="et-section-title anim-text">We're Sponsored By</h2>
+                <h6 class="et-section-sub-title"><span>পার্টনার</span></h6>
+                <h2 class="et-section-title"><span>আমাদের পার্টনার কোম্পানীসমূহ</span></h2>
             </div>
 
             <!-- sponsors -->

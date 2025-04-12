@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Sponsor List')
+@section('title', 'পার্টনার তালিকা')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -9,10 +9,10 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            Sponsor List
+                            পার্টনার তালিকা
                         </div>
                         <div>
-                            <a href="{{ route('create.sponsor') }}" class="btn btn-primary btn-sm">Add new sponsor </a>
+                            <a href="{{ route('create.sponsor') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন পার্টনার </a>
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -20,10 +20,10 @@
                             <table class="table" id="example"  style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>Company Name</th>
-                                        <th>Company Logo</th>
-                                        <th>Amount</th>
-                                        <th>Action</th>
+                                        <th>কোম্পানীর নাম</th>
+                                        <th>কোম্পানীর লোগো</th>
+                                        <th>পরিমাণ</th>
+                                        <th>একশন</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -35,17 +35,17 @@
                                             <img src="{{ asset('storage/' . $sponsor->photo) }}" alt="company logo"
                                                 style="height: 50px; border-radius: 6px;">
                                             @else
-                                            <img src="{{ asset('/assets/images/user/avatar-2.jpg') }}" alt="Default photo"
+                                            <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Default photo"
                                                 style="height: 50px; border-radius: 6px;">
                                             @endif
                                         </td>
                                         <td>&#2547; {{ $sponsor->amount }}</td>
                                         <td>
                                             <div class="d-flex">
-                                                <a class="btn btn-info btn-sm me-2" href="{{ route('edit.sponsor', $sponsor->id) }}">Edit</a>
+                                                <a class="btn btn-info btn-sm me-2" href="{{ route('edit.sponsor', $sponsor->id) }}"><i class="ph ph-pencil"></i> এডিট</a>
                                                 <form class="deleteForm" action="{{ route('destroy.sponsor', $sponsor->id) }}" method="post">
                                                     @csrf
-                                                    <button type="button" class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                    <button type="button" class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
                                                 </form>
                                             </div>
                                         </td>
