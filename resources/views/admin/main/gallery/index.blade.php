@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Gallery Images')
+@section('title', 'ছবি গ্যালারি')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -9,10 +9,10 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            Gallery Images
+                            ছবি গ্যালারি
                         </div>
                         <div>
-                            <a href="{{ route('create.gallery') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> Add new photo</a>
+                            <a href="{{ route('create.gallery') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন ছবি</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -31,7 +31,7 @@
                             @else
                             <div class="d-flex align-items-center justify-content-center flex-column">
                                 <img src="{{ asset('/') }}images/empty.jpg" alt="Photo" style="height: 200px;">
-                                <h5 class="mt-5 mb-5 text-center text-secondary">There is no image in your gallery!</h5>
+                                <h5 class="mt-5 mb-5 text-center text-secondary">কোনো ছবি পাওয়া যায়নি!</h5>
                             </div>
                         @endif
                     </div>

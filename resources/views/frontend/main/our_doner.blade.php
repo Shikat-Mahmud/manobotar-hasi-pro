@@ -25,7 +25,7 @@
             <!-- artists -->
             @if ($doners->isNotEmpty())
             <div>
-                <h3 class="text-[30px] xs:text-[25px] font-semibold text-etBlack mb-[30px] xs:mb-[15px]">Our Doners</h3>
+                <h3 class="text-[30px] xs:text-[25px] font-semibold text-etBlack mb-[30px] xs:mb-[15px]">ডোনারগণ</h3>
                 <div class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[25px] gap-y-[10px] mb-[30px]">
 
                     @foreach ($doners as $doner)

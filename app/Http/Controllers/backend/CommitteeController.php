@@ -6,8 +6,6 @@ use App\Models\Committee;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
 
 class CommitteeController extends Controller
 {
