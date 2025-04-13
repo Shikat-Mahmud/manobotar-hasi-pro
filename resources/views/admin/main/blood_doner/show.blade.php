@@ -78,7 +78,7 @@
                                 </div>
                                 <div>
                                     <span style="font-size: 18px; margin-left: 5px;"
-                                        class="ml-3"><b>{{ $doner->status == 1 ? 'সক্রিয়' : 'অপেক্ষমান' }}</b></span>
+                                        class="ml-3"><b>{{ $doner->status == 1 ? 'প্রস্তুত' : 'অপেক্ষমান' }}</b></span>
                                 </div>
                             </div>
                         </div>

@@ -11,7 +11,7 @@ class AdviserController extends Controller
 {
     public function index()
     {
-        $advisers = Adviser::all();
+        $advisers = Adviser::inRandomOrder()->get();
         return view('frontend.main.adviser', compact('advisers'));
     }
 

@@ -58,9 +58,37 @@
                                                 <td>{{ $member->address }}</td>
                                                 <td>
                                                     @if ($member->status === 1)
-                                                        <span class="badge bg-success">সক্রিয়</span>
+                                                        <span class="badge bg-success">প্রস্তুত</span>
                                                     @elseif($member->status === 0)
-                                                        <span class="badge bg-warning">অপেক্ষমান</span>
+                                                        @php
+                                                            $donatedDate = \Carbon\Carbon::parse($member->donated_at);
+                                                            $daysPassed = $donatedDate->diffInDays(now());
+                                                            $daysLeft = max(90 - $daysPassed, 0);
+
+                                                            $bnDigits = [
+                                                                '০',
+                                                                '১',
+                                                                '২',
+                                                                '৩',
+                                                                '৪',
+                                                                '৫',
+                                                                '৬',
+                                                                '৭',
+                                                                '৮',
+                                                                '৯',
+                                                            ];
+                                                            $daysLeftBn = collect(str_split($daysLeft))
+                                                                ->map(function ($digit) use ($bnDigits) {
+                                                                    return is_numeric($digit)
+                                                                        ? $bnDigits[$digit]
+                                                                        : $digit;
+                                                                })
+                                                                ->implode('');
+                                                        @endphp
+
+                                                        <span class="badge bg-danger">
+                                                            {{ $daysLeftBn }} দিন বাকি
+                                                        </span>
                                                     @endif
                                                 </td>
                                                 <td>
@@ -81,13 +109,15 @@
                                                         </form>
 
                                                         @if ($member->status == 1)
-                                                            <a class="btn btn-success btn-sm"
-                                                                href="{{ route('blood-doner.status', $member->id) }}">
+                                                            <a href="{{ route('blood-doner.status', $member->id) }}"
+                                                                class="btn btn-success btn-sm confirm-status-change"
+                                                                data-id="{{ $member->id }}" data-status="done">
                                                                 <i class="ph ph-drop"></i>
                                                             </a>
                                                         @else
-                                                            <a class="btn btn-warning btn-sm"
-                                                                href="{{ route('blood-doner.status', $member->id) }}">
+                                                            <a href="{{ route('blood-doner.status', $member->id) }}"
+                                                                class="btn btn-warning btn-sm confirm-status-change"
+                                                                data-id="{{ $member->id }}" data-status="ready">
                                                                 <i class="ph ph-drop-half"></i>
                                                             </a>
                                                         @endif
@@ -107,3 +137,38 @@
         </div>
     </section>
 @endsection
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.confirm-status-change');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const url = this.getAttribute('href');
+                const status = this.dataset.status;
+                let message = '';
+
+                if (status === 'done') {
+                    message = 'আপনি কি নিশ্চিত রক্তদাতার রক্তদান সম্পূর্ণ?';
+                } else {
+                    message = 'আপনি কি নিশ্চিত রক্তদাতা প্রস্তুত আছেন?';
+                }
+
+                swal({
+                    title: 'নিশ্চিত করুন',
+                    text: message,
+                    icon: 'warning',
+                    buttons: ['না', 'হ্যাঁ'],
+                    dangerMode: true,
+                }).then((willChange) => {
+                    if (willChange) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    });
+</script>
+@endpush

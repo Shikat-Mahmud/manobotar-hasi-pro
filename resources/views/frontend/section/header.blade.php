@@ -25,6 +25,7 @@
                     <li><a href="{{ route('home') }}">হোম</a></li>
                     <li><a href="{{ route('event.detail') }}">আমাদের মিশন</a></li>
                     <li><a href="{{ route('advisers') }}">উপদেষ্টা মণ্ডলী</a></li>
+                    <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>
                     <li><a href="{{ route('all.committee') }}">কমিটি</a></li>
                     <li><a href="{{ route('gallery') }}">ছবি গ্যালারি</a></li>
                     <li><a href="{{ route('our.doner') }}">ডোনেশন</a></li>
@@ -42,7 +43,7 @@
                 </ul>
 
                 <!-- button -->
-                <a href="{{ route('ticket') }}"
+                <a href="{{ route('donate.blood') }}"
                     class="et-btn bg-white flex items-center justify-center gap-x-[15px] h-[50px] px-[15px] text-etBlue font-medium text-[17px] rounded-full group">
                     <i class="fa-solid fa-hand-holding-droplet text-[20px]"></i>
                     রক্তদাতা রেজিস্ট্রেশন</a>

@@ -57,7 +57,7 @@
                                 <label for="status" class="col-md-4">স্ট্যাটাসঃ </label>
                                 <div class="col-md-8">
                                     <select name="status" id="status" class="form-control">
-                                        <option value="1" {{ $doner->status == 1 ? 'selected' : '' }}>সক্রিয়</option>
+                                        <option value="1" {{ $doner->status == 1 ? 'selected' : '' }}>প্রস্তুত</option>
                                         <option value="0" {{ $doner->status == 0 ? 'selected' : '' }}>অপেক্ষমান</option>
                                     </select>
                                 </div>

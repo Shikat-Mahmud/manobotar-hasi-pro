@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('photo')->nullable();
             $table->tinyInteger('status')->default(1);
+            $table->timestamp('donated_at')->nullable();
             $table->timestamps();
         });
     }

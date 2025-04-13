@@ -24,24 +24,21 @@
                 <h3 class="text-[24px] py-[16px]">কমিটির সদস্যগন</h3>
                 <div
                     class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
-                    @foreach ($committees as $student)
+                    @foreach ($committees as $member)
                         <!-- single artist -->
                         <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[30px] relative"
                             style="background-color: #d3deff;">
                             <div class="w-[168px]">
                                 <div class="overflow-hidden">
-                                    @if (isset($student->photo))
-                                        <img src="{{ asset('storage/' . $student->photo) }}" alt="Guest Image"
+                                    @if (isset($member->photo))
+                                        <img src="{{ asset('storage/' . $member->photo) }}" alt="Guest Image"
                                             class="rounded-[6px] w-[168px] aspect-square" style="object-fit: cover;">
                                     @else
                                         <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}" alt="Guest Image"
                                             class="rounded-[6px] w-[168px] aspect-square">
                                     @endif
                                 </div>
-                                <h5 class="font-semibold text-[20px] pt-[10px] text-etBlack">{{ $student->name }}</h5>
-                                @if (isset($student->position))
-                                    <span class="inline-block text-etGray2 text-[16px]">{{ $student->position }}</span>
-                                @endif
+                                <h5 class="font-semibold text-[20px] pt-[10px] text-etBlack">{{ $member->name }}</h5>
                             </div>
                         </div>
                     @endforeach

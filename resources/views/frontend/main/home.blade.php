@@ -23,7 +23,7 @@
                             মানবতার হাসি ফাউন্ডেশন</h1>
 
                         <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
-                            <a href="{{ route('ticket') }}"
+                            <a href="{{ route('donate.blood') }}"
                                 class="et-btn bg-white inline-flex items-center justify-center gap-x-[13px] h-[45px] px-[15px] text-etBlue font-normal text-[17px] rounded-full"><i class="fa-solid fa-hand-holding-droplet"></i> রক্তদানে ইচ্ছুক?</a>
                         </div>
                     </div>

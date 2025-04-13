@@ -150,6 +150,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/blood-doner-status/{id}', [BloodDonerController::class, 'changeStatus'])->name('blood-doner.status');
 });
 
+Route::get('/blood-donation-registration', [BloodDonerController::class, 'bloodDonate'])->name('donate.blood');
+Route::post('/blood-donation-registration', [BloodDonerController::class, 'bloodDonateStore'])->name('donate.blood.post');
+
 Route::get('/blood-doners', [BloodDonerController::class, 'index'])->name('blood-doners');
 // all blood doner route end //
 
