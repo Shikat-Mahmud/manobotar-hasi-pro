@@ -88,7 +88,7 @@
                                                         @else
                                                             <a class="btn btn-warning btn-sm"
                                                                 href="{{ route('blood-doner.status', $member->id) }}">
-                                                                <i class="ph ph-drop"></i>
+                                                                <i class="ph ph-drop-half"></i>
                                                             </a>
                                                         @endif
                                                     </div>
