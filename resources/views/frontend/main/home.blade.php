@@ -92,7 +92,7 @@
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto max-w-full ml-[124px] md:mr-0 xs:mx-auto">
                     @if (isset($about->image))
-                        <img src="{{ asset('storage/' . $about->image) }}" alt="image" class="shrink-0 rounded-[50px]" />
+                        <img src="{{ asset('storage/' . $about->image) }}" alt="image" class="shrink-0 rounded-[50px]" style="height: auto; width: 500px;" />
                     @else
                         <img src="{{ asset('frontend/img/about-2-img.png') }}" alt="image"
                             class="shrink-0 rounded-[50px]" />
