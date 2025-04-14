@@ -58,6 +58,11 @@
                 @endif
 
                 <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('show.about') }}" class="pc-link"><span class="pc-micon">
+                            <i class="ph ph-info"></i></span><span class="pc-mtext">ফাউন্ডেশনের তথ্য</span></a>
+                </li>
+
+                <li class="pc-item pc-hasmenu">
                     <a href="{{ route('gallery.list') }}" class="pc-link"><span class="pc-micon">
                             <i class="ph ph-image"></i></span><span class="pc-mtext">ছবি গ্যালারি</span></a>
                 </li>

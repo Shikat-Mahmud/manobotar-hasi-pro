@@ -138,7 +138,7 @@
 
                     <ul class="space-y-[17px] text-[16px] font-light text-[#f2f2f2]">
                         <li>
-                            <a href="{{ route('event.detail') }}"
+                            <a href="{{ route('about') }}"
                                 class="flex items-center gap-[10px] hover:text-etBlue group">
                                 <span class="icon">
                                     <svg width="12" height="16" viewBox="0 0 12 16" fill="none"

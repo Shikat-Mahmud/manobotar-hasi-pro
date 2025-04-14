@@ -18,31 +18,31 @@
                         <form action="{{ route('update.adviser', $adviser->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row mt-3">
-                                <label for="name" class="col-md-4">উপদেষ্টার নাম: <span class="text-danger">*</span></label>
+                                <label for="name" class="col-md-4">উপদেষ্টার নামঃ <span class="text-danger">*</span></label>
                                 <div class="col-md-8">
                                     <input type="text" id="name" name="name" value="{{ old('name', $adviser->name) }}" class="form-control" placeholder="উপদেষ্টার নাম" required />
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="title" class="col-md-4">পদবী:</label>
+                                <label for="title" class="col-md-4">পদবীঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" id="title" name="title" value="{{ old('name', $adviser->title) }}" class="form-control" placeholder="পদবী" />
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="phone" class="col-md-4">মোবাইল:</label>
+                                <label for="phone" class="col-md-4">মোবাইলঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" id="phone" name="phone" value="{{ old('name', $adviser->phone) }}" class="form-control" placeholder="মোবাইল" />
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="email" class="col-md-4">ইমেইল:</label>
+                                <label for="email" class="col-md-4">ইমেইলঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" id="email" name="email" value="{{ old('name', $adviser->email) }}" class="form-control" placeholder="ইমেইল" />
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="photo" class="col-md-4">ছবি: </label>
+                                <label for="photo" class="col-md-4">ছবিঃ </label>
                                 <div class="col-md-8">
                                     <input type="file" id="photo" name="photo" class="form-control" />
                                     @if($adviser->photo)

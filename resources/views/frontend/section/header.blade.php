@@ -23,7 +23,7 @@
                 <ul
                     class="et-header-nav flex md:flex-col gap-x-[43px] xl:gap-x-[33px] font-kanit text-[17px] font-normal">
                     <li><a href="{{ route('home') }}">হোম</a></li>
-                    <li><a href="{{ route('event.detail') }}">আমাদের মিশন</a></li>
+                    <li><a href="{{ route('about') }}">আমাদের মিশন</a></li>
                     <li><a href="{{ route('advisers') }}">উপদেষ্টা মণ্ডলী</a></li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>
                     <li><a href="{{ route('all.committee') }}">কমিটি</a></li>

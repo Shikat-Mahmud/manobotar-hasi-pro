@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\AboutUsController;
 use App\Http\Controllers\backend\AdviserController;
 use App\Http\Controllers\backend\BloodDonerController;
 use App\Http\Controllers\backend\CommitteeController;
@@ -155,6 +156,17 @@ Route::post('/blood-donation-registration', [BloodDonerController::class, 'blood
 
 Route::get('/blood-doners', [BloodDonerController::class, 'index'])->name('blood-doners');
 // all blood doner route end //
+
+
+// all about us route start //
+Route::middleware('auth')->group(function () {
+    Route::get('/edit-about/{id}', [AboutUsController::class, 'edit'])->name('edit.about');
+    Route::post('/update-about/{id}', [AboutUsController::class, 'update'])->name('update.about');
+    Route::get('/show-about', [AboutUsController::class, 'show'])->name('show.about');
+});
+
+Route::get('/about', [AboutUsController::class, 'index'])->name('about');
+// all about us route end //
 
 
 // all register route start //

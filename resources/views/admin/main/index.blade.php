@@ -20,9 +20,9 @@
                     <div class="card bg-grd-success order-card">
                         <div class="card-body">
                             <h6 class="text-white">Event Date</h6>
-                            <h2 class="text-end text-white"><i class="ph ph-calendar float-start"></i><span>{{ \Carbon\Carbon::parse($event->datetime)->format('d M Y') }}</span>
+                            <h2 class="text-end text-white"><i class="ph ph-calendar float-start"></i><span>34</span>
                             </h2>
-                            <p class="m-b-0">Start From<span class="float-end">{{ \Carbon\Carbon::parse($event->datetime)->format('g:i A') }}</span></p>
+                            <p class="m-b-0">Start From<span class="float-end">24</span></p>
                         </div>
                     </div>
                 </div>

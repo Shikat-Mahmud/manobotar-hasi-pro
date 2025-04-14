@@ -18,31 +18,31 @@
                         <form action="{{ route('store.adviser') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row mt-3">
-                                <label for="name" class="col-md-4 required">উপদেষ্টার নাম <span class="text-danger">*</span></label>
+                                <label for="name" class="col-md-4 required">উপদেষ্টার নামঃ <span class="text-danger">*</span></label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" class="form-control" placeholder="উপদেষ্টার নাম" required/>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="title" class="col-md-4 required">পদবী</label>
+                                <label for="title" class="col-md-4 required">পদবীঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" name="title" class="form-control" placeholder="পদবী"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="phone" class="col-md-4 required">মোবাইল</label>
+                                <label for="phone" class="col-md-4 required">মোবাইলঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" name="phone" class="form-control" placeholder="মোবাইল"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="email" class="col-md-4 required">ইমেইল</label>
+                                <label for="email" class="col-md-4 required">ইমেইলঃ</label>
                                 <div class="col-md-8">
                                     <input type="text" name="email" class="form-control" placeholder="ইমেইল"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="photo" class="col-md-4">ছবি </label>
+                                <label for="photo" class="col-md-4">ছবিঃ</label>
                                 <div class="col-md-8">
                                     <input type="file" name="photo" id="photo" class="form-control" accept="image/*" />
                                 </div>
