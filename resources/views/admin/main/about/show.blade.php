@@ -16,14 +16,15 @@
                             </div>
                         </div>
                         <div class="card-body text-dark">
+                            @if (isset($about->image) || isset($about->image2))
                             <div class="p-2 text-center mb-4 row justify-content-center">
                                 <div class="col-12 col-md-6 mb-3">
                                     @if (isset($about->image))
                                         <img src="{{ asset('storage/' . $about->image) }}" alt="Photo"
                                              class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
-                                    @else
+                                    {{-- @else
                                         <img src="{{ asset('assets/images/user/avatar-1.jpg') }}" alt="Photo"
-                                             class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
+                                             class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;"> --}}
                                     @endif
                                 </div>
                             
@@ -31,12 +32,13 @@
                                     @if (isset($about->image2))
                                         <img src="{{ asset('storage/' . $about->image2) }}" alt="Photo"
                                              class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
-                                    @else
+                                    {{-- @else
                                         <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Photo"
-                                             class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
+                                             class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;"> --}}
                                     @endif
                                 </div>
-                            </div>                            
+                            </div>  
+                            @endif                          
 
                             <div class="row d-flex text-left">
                                 <div class="col-md-4">

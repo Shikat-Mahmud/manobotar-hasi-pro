@@ -118,11 +118,11 @@
 
                 <!-- right -->
                 <div class="et-about__txt max-w-[570px] grow">
-                    <h6 class="et-section-sub-title"><span>আমাদের ফাউন্ডেশন</span></h6>
+                    <h6 class="et-section-sub-title"><span>আমাদের প্রতিষ্ঠান</span></h6>
                     <h2 class="et-section-title mb-[24px] md:mb-[19px]"><span>{{ $about->organization_name }}</span></h2>
 
                     <h6 class="mb-[30px] text-[16px] text-etGray md:mb-[30px] rev-slide-up">
-                        {!! $about->description !!}
+                        {{$shortDescription}}
                     </h6>
 
                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
