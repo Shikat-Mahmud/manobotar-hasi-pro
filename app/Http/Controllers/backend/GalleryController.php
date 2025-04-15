@@ -42,7 +42,7 @@ class GalleryController extends Controller
                 }
             }
 
-            return redirect()->route('gallery.list')->with('success', 'Photos uploaded successfully.');
+            return redirect()->route('gallery.list')->with('success', 'ছবি সফলভাবে আপলোড হয়েছে।');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
         }
@@ -57,6 +57,6 @@ class GalleryController extends Controller
         }
         $gallery->delete();
 
-        return redirect()->route('gallery.list')->with('success', 'Photo deleted successfully.');
+        return redirect()->route('gallery.list')->with('success', 'ছবি সফলভাবে ডিলিট করা হয়েছে।');
     }
 }

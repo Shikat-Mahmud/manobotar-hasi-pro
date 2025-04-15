@@ -153,7 +153,7 @@
                             class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
                             @if ($doners->isNotEmpty())
                                 @foreach ($doners as $doner)
-                                    <!-- single artist -->
+                                    <!-- single doner -->
                                     <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[30px] relative"
                                         style="background-color: #d3deff;">
                                         <div class="w-[168px]">

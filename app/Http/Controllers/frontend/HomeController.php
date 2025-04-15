@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\BloodDoner;
 use App\Models\Gallery;
 use App\Models\Review;
 use App\Models\Sponsor;
@@ -16,10 +17,11 @@ class HomeController extends Controller
         $reviews = Review::where('status', 1)->inRandomOrder()->get();
         $galleries = Gallery::latest()->limit(8)->inRandomOrder()->get();
         $sponsors = Sponsor::all();
+        $doners = BloodDoner::inRandomOrder()->get();
 
         $shortDescription = Str::words(strip_tags($about->description), 100, '...');
 
-        return view('frontend.main.home', compact('about', 'reviews', 'galleries', 'sponsors', 'shortDescription'));
+        return view('frontend.main.home', compact('about', 'reviews', 'galleries', 'sponsors', 'doners', 'shortDescription'));
     }
 
     public function appDownload()

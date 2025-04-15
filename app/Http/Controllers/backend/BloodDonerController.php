@@ -52,7 +52,7 @@ class BloodDonerController extends Controller
             // Validate the request
             $request->validate([
                 'name' => 'required|string|max:255',
-                'blood_group' => 'required|string|in:' . implode(',', ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+"]),
+                'blood_group' => 'required|string|in:' . implode(',', ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]),
                 'phone' => 'required|string|max:15',
                 'email' => 'nullable|email|max:100',
                 'address' => 'nullable|max:255',
@@ -99,7 +99,7 @@ class BloodDonerController extends Controller
         try {
             $request->validate([
                 'name' => 'required|string|max:255',
-                'blood_group' => 'required|string|in:' . implode(',', ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+"]),
+                'blood_group' => 'required|string|in:' . implode(',', ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]),
                 'phone' => 'required|string|max:15',
                 'email' => 'nullable|email|max:100',
                 'address' => 'nullable|max:255',

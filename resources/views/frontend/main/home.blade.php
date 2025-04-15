@@ -62,7 +62,7 @@
                         <div class="flex items-center gap-[15px] ">
                             <!-- video button -->
                             <!-- <a href="https://www.youtube.com/watch?v=AQleI8oFqZo&amp;t=1s" data-fslightbox="banner-video-1" class="w-[93px] aspect-square rounded-full border border-white/20 flex justify-center items-center text-etBlue ml-auto md:ml-0 relative z-[1] text-[18px] before:absolute before:w-[70px] before:h-[70px] before:bg-white before:rounded-full before:-z-[1] before:transition before:duration-[400ms] hover:text-white hover:border-etBlue hover:before:bg-etBlue animate-[shadow_2s_ease-in_infinite]"><i class="fa-solid fa-play"></i></a>
-                                                            <span class="font-light text-[18px] xxs:hidden">View Promo</span> -->
+                                                                        <span class="font-light text-[18px] xxs:hidden">View Promo</span> -->
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,8 @@
                 <!-- left -->
                 <div class="et-about-img relative z-[1] md:w-auto max-w-full ml-[124px] md:mr-0 xs:mx-auto">
                     @if (isset($about->image))
-                        <img src="{{ asset('storage/' . $about->image) }}" alt="image" class="shrink-0 rounded-[50px]" style="height: auto; width: 500px;" />
+                        <img src="{{ asset('storage/' . $about->image) }}" alt="image" class="shrink-0 rounded-[50px]"
+                            style="height: auto; width: 500px;" />
                     @else
                         <img src="{{ asset('frontend/img/about-2-img.png') }}" alt="image"
                             class="shrink-0 rounded-[50px]" />
@@ -122,12 +123,12 @@
                     <h2 class="et-section-title mb-[24px] md:mb-[19px]"><span>{{ $about->organization_name }}</span></h2>
 
                     <h6 class="mb-[30px] text-[16px] text-etGray md:mb-[30px] rev-slide-up">
-                        {{$shortDescription}}
+                        {{ $shortDescription }}
                     </h6>
 
                     <div class="et-banner-btns flex flex-wrap items-center gap-[20px]">
                         <a href="{{ route('about') }}"
-                        class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] hover:bg-etGray">
+                            class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] hover:bg-etGray">
                             আরো পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
 
@@ -136,6 +137,7 @@
         </div>
     </section>
     <!-- ABOUT SECTION END -->
+
 
     <!-- GALLERY SECTION START -->
     <section class="grid grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">
@@ -154,6 +156,106 @@
         @endif
     </section>
     <!-- GALLERY SECTION END -->
+
+
+    @if (isset($doners))
+        <!-- BLOOD DONER SECTION START -->
+        <section class="et-blogs overflow-hidden pt-[130px] xl:py-[80px] md:py-[60px]">
+            <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
+                <!-- heading -->
+                <div
+                    class="et-blogs-heading flex xs:flex-col justify-between items-center mb-[52px] xl:mb-[32px] lg:mb-[22px] gap-[15px]">
+                    <div class="left xs:text-center">
+                        <h6 class="et-section-sub-title"><span>রক্তদাতা</span></h6>
+                        <h2 class="et-section-title"><span>আমাদের রক্তদাতাগণ</span></h2>
+                    </div>
+
+                    <div class="right">
+                        <div class="et-blogs-slider-nav flex gap-[16px] sm:gap-[12px]">
+                            <button
+                                class="prev border border-[#D9D9D9] rounded-full w-[60px] sm:w-[50px] h-[60px] sm:h-[50px] text-[18px] text-etBlack hover:bg-etBlue hover:border-etbg-etBlue hover:text-white">
+                                <i class="fa-solid fa-arrow-left-long"></i>
+                            </button>
+                            <button
+                                class="next border border-[#D9D9D9] rounded-full w-[60px] sm:w-[50px] h-[60px] sm:h-[50px] text-[18px] text-etBlack hover:bg-etBlue hover:border-etbg-etBlue hover:text-white">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="et-2-blogs-slider swiper p-[30px] -m-[30px]">
+                    <div class="swiper-wrapper">
+
+                        @foreach ($doners as $doner)
+                            <!-- single doner -->
+                            <div class="swiper-slide group">
+                                <div
+                                    class="et-blog bg-white relative group-[.swiper-slide-visible]:shadow-[0_4px_25px_rgba(0,0,0,0.06)] rounded-[12px] overflow-hidden">
+
+                                    {{-- Donor Image --}}
+                                    <div class="et-blog__img relative overflow-hidden z-[1]">
+                                        @if (isset($doner->photo))
+                                            <img src="{{ asset('storage/' . $doner->photo) }}" alt="{{ $doner->name }}"
+                                                class="w-full aspect-square object-cover transition duration-[400ms] group-hover:scale-105">
+                                        @else
+                                            <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}"
+                                                alt="Default Image" class="w-full aspect-square object-cover">
+                                        @endif
+                                    </div>
+
+                                    {{-- Donor Info --}}
+                                    <div class="et-blog__txt z-[3] p-[20px] bg-white">
+                                        <h4 class="text-[20px] font-semibold text-etBlack mb-[6px]">{{ $doner->name }}
+                                        </h4>
+
+                                        <div class="text-etGray2 text-[16px] mb-[10px] flex items-center gap-2">
+                                            <i class="fa-solid fa-droplet" style="color: #e60202; margin-right: 5px;"></i>
+                                            {{ $doner->blood_group }}
+                                        </div>
+
+                                        @php
+                                            $donatedDate = \Carbon\Carbon::parse($doner->donated_at);
+                                            $daysPassed = $donatedDate->diffInDays(now());
+                                            $daysLeft = max(90 - $daysPassed, 0);
+
+                                            $bnDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+                                            $daysLeftBn = collect(str_split($daysLeft))
+                                                ->map(fn($digit) => is_numeric($digit) ? $bnDigits[$digit] : $digit)
+                                                ->implode('');
+                                        @endphp
+
+                                        {{-- Status Badge --}}
+                                        @if ($doner->status === 1)
+                                            <span
+                                                class="inline-block  text-white text-[12px] px-[10px] py-[3px] rounded-[4px]"
+                                                style="background-color: #057A55;">
+                                                রক্তদানে প্রস্তুত
+                                            </span>
+                                        @else
+                                            <span
+                                                class="inline-block text-white text-[12px] px-[10px] py-[3px] rounded-[4px]"
+                                                style="background-color: #4B5563;">
+                                                {{ $daysLeftBn }} দিন বাকি
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+
+                    </div>
+                    <div class="text-center pt-[54px]">
+                        <a href="{{ route('blood-doners') }}"
+                            class="bg-etBlue inline-flex items-center justify-center gap-[10px] h-[56px] px-[24px] rounded-full text-white text-[16px] hover:bg-etBlack">আরো
+                            দেখুন <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BLOOD DONER SECTION END -->
+    @endif
+
 
     <!-- TESTIMONIAL SECTION START -->
     @if ($reviews->isNotEmpty())
@@ -207,7 +309,8 @@
                     </div>
                     <div class="text-center pt-[54px]">
                         <a href="{{ route('event.review') }}"
-                            class="bg-etBlue inline-flex items-center justify-center gap-[10px] h-[56px] px-[24px] rounded-[10px] text-white text-[16px] hover:bg-etBlack">রিভিউ করুন <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                            class="bg-etBlue inline-flex items-center justify-center gap-[10px] h-[56px] px-[24px] rounded-full text-white text-[16px] hover:bg-etBlack">রিভিউ
+                            করুন <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
                     </div>
                 </div>
             </div>
