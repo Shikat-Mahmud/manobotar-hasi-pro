@@ -160,7 +160,8 @@
 
     @if (isset($doners))
         <!-- BLOOD DONER SECTION START -->
-        <section class="et-blogs overflow-hidden pt-[130px] xl:py-[80px] md:py-[60px]">
+        <section class="et-blogs overflow-hidden pt-[130px] xl:py-[80px] md:py-[60px] relative z-[1] after:absolute"
+        style="background-image: url('{{ asset('frontend/img/features-bg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
             <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
                 <!-- heading -->
                 <div
@@ -251,6 +252,13 @@
                             দেখুন <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
                     </div>
                 </div>
+            </div>
+
+            <!-- vectors -->
+            <div>
+                <img src="{{ asset('frontend/img/team-vector.png') }}" alt="vector" class="pointer-events-none absolute bottom-[130px] left-[40px] -z-[1]">
+                <img src="{{ asset('frontend/img/features-vector-2.png') }}" alt="vector" class="pointer-events-none absolute top-[222px] right-[180px] -z-[1]">
+                <img src="{{ asset('frontend/img/features-vector-3.png') }}" alt="vector" class="pointer-events-none absolute bottom-[138px] right-[106px] -z-[1]">
             </div>
         </section>
         <!-- BLOOD DONER SECTION END -->

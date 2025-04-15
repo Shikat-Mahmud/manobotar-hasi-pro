@@ -210,17 +210,52 @@ h6 {
   color: var(--et-pink);
 }
 
+.et-3-pagination a.active {
+  background-color: var(--et-pink);
+  border-color: var(--et-pink);
+  color: var(--white);
+}
+
 .et-pagination a.active {
   background-color: var(--et-blue);
   border-color: var(--et-blue);
   color: var(--white);
 }
 
-.et-3-pagination a.active {
-  background-color: var(--et-pink);
-  border-color: var(--et-pink);
+.et-pagination {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.et-pagination a,
+.et-pagination span {
+  padding: 8px 15px;
+  border: 1px solid var(--et-border, #d1d5db);
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--et-text, #333);
+  transition: all 0.3s;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.et-pagination a:hover {
+  background-color: var(--et-hover, #f0f0f0);
+}
+
+.et-pagination a.active {
+  background-color: var(--et-blue);
+  border-color: var(--et-blue);
   color: var(--white);
 }
+
+.et-pagination .disabled {
+  color: var(--et-muted, #b0b0b0);
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
 
 .video-btn-shadow {
   animation: shadow 2s ease-in infinite;

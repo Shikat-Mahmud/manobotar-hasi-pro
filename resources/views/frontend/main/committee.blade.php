@@ -45,9 +45,9 @@
                 </div>
 
                 <!-- Render pagination links for the main registrations -->
-                {{-- <div class="font-kanit mt-[10px]" style="text-align: center;">
-                    {{ $committees->links('pagination::pagination_view') }}
-                </div> --}}
+                <div class="font-kanit mt-[10px]" style="text-align: center;">
+                    {{ $committees->links('pagination::et-pagination') }}
+                </div>
             </div>
         @else
             <div class="flex flex-col justify-center items-center">

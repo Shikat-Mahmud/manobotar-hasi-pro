@@ -34,6 +34,11 @@
                         </div>
                     @endforeach
                 </div>
+
+                <!-- Pagination -->
+                <div class="font-kanit mt-[50px]" style="text-align: center;">
+                    {{ $galleries->links('pagination::et-pagination') }}
+                </div>
             @else
                 <div class="flex flex-col justify-center items-center">
                     <h3 class="text-center text-[2.4rem] text-[#757277]">কোনো ছবি পাওয়া যায়নি!</h3>
@@ -43,5 +48,6 @@
         </div>
     </div>
     <!-- GALLERY SECTION END -->
+
 
 @endsection

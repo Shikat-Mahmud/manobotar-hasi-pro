@@ -139,9 +139,9 @@
                 </div>
 
                 <!-- Render pagination links for the main registrations -->
-                {{-- <div class="font-kanit mt-[10px]" style="text-align: center;">
-                    {{ $doners->links('pagination::pagination_view') }}
-                </div> --}}
+                <div class="font-kanit mt-[10px]" style="text-align: center;">
+                    {{ $doners->links('pagination::et-pagination') }}
+                </div>
             </div>
 
             @if (isset($donersByBloodGroup))
