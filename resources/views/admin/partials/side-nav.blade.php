@@ -27,7 +27,7 @@
                         auth()->user()->hasAnyPermission(['create-event', 'edit-event', 'show-event', 'delete-event']))
                     <li class="pc-item pc-hasmenu">
                         <a href="{{ route('events') }}" class="pc-link"><span class="pc-micon">
-                                <i class="ph ph-calendar"></i></span><span class="pc-mtext">উদ্যোগ সমূহ</span></a>
+                                <i class="ph ph-calendar"></i></span><span class="pc-mtext">প্রজেক্ট সমূহ</span></a>
                     </li>
                 @endif
 

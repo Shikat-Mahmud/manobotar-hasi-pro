@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'উদ্যোগ সমূহ')
+@section('title', 'প্রজেক্ট সমূহ')
 @push('styles')
     <style>
         .desc-box {
@@ -16,10 +16,10 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
                             <i class="fas fa-table me-1"></i>
-                            উদ্যোগ সমূহ
+                            প্রজেক্ট সমূহ
                         </div>
                         <div>
-                            <a href="{{ route('create.event') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন উদ্যোগ</a>
+                            <a href="{{ route('create.event') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus ml-2 "></i> নতুন প্রজেক্ট</a>
                         </div>
                     </div>
                     <div class="card-body table-border-style">
@@ -27,7 +27,7 @@
                             <table class="table" id="example" style="max-width:100%;">
                                 <thead>
                                     <tr>
-                                        <th>উদ্যোগের নাম</th>
+                                        <th>প্রজেক্টের নাম</th>
                                         {{-- <th>লোগো</th> --}}
                                         <th>ছবি</th>
                                         <th>বিস্তারিত তথ্য</th>
