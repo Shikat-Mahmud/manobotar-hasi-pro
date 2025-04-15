@@ -20,7 +20,7 @@
 <!-- BREADCRUMB SECTION START -->
 <section
     class="et-breadcrumb bg-[#000D83] pt-[146px] lg:pt-[146px] sm:pt-[146px] pb-[130px] lg:pb-[110px] sm:pb-[80px] relative z-[1] before:absolute before:inset-0 before:-z-[1] before:opacity-30"
-    style="background-image: url('{{asset('frontend/img/upcomng-events-bg.jpg')}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    style="background-image: url('{{asset('frontend/img/page-bg.jpg')}}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full text-center text-white">
         <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">Get Ticket</h1>
         <ul class="inline-flex items-center gap-[10px] font-medium text-[16px]">
