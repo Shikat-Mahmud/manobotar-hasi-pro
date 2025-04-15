@@ -161,8 +161,8 @@
             <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
                 <!-- heading -->
                 <div class="et-testimonial-heading text-center mb-[46px] xl:mb-[26px] lg:mb-[16px] gap-[15px]">
-                    <h6 class="et-section-sub-title anim-text">Testimonials</h6>
-                    <h2 class="et-section-title anim-text">Talks About The Event</h2>
+                    <h6 class="et-section-sub-title"><span>রিভিউ</span></h6>
+                    <h2 class="et-section-title"><span>ফাউন্ডেশন সম্পর্কে রিভিউ সমূহ</span></h2>
                 </div>
 
                 <!-- slider -->
@@ -192,10 +192,6 @@
 
                                     <div class="text-center">
                                         <h5 class="text-black font-medium text-[20px] mb-[3px]">{{ $review->name }}</h5>
-                                        @if (isset($review->batch))
-                                            <h6 class="text-[16px] text-etGray font-normal mb-[20px]">{{ $review->batch }}
-                                                Batch</h6>
-                                        @endif
                                         <p class="text-[16px] text-etGray font-normal mb-[20px]">{!! $review->message !!}
                                         </p>
                                     </div>
@@ -211,8 +207,7 @@
                     </div>
                     <div class="text-center pt-[54px]">
                         <a href="{{ route('event.review') }}"
-                            class="bg-etBlue inline-flex items-center justify-center gap-[10px] h-[56px] px-[24px] rounded-[10px] text-white text-[16px] hover:bg-etBlack">Give
-                            Your Response <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                            class="bg-etBlue inline-flex items-center justify-center gap-[10px] h-[56px] px-[24px] rounded-[10px] text-white text-[16px] hover:bg-etBlack">রিভিউ করুন <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span></a>
                     </div>
                 </div>
             </div>

@@ -46,11 +46,6 @@
                                                             style="height: 50px; border-radius: 6px;">
                                                     @endif
                                                 </td>
-                                                @if (isset($item->batch))
-                                                    <td>{{ $item->batch }}</td>
-                                                @else
-                                                    <td>--</td>
-                                                @endif
                                                 <td class="desc-box">{{ $item->message }}</td>
                                                 <td>
                                                     <div class="span2">

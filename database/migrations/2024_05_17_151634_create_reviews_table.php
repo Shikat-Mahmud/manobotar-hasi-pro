@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('photo')->nullable();
             $table->string('name');
-            $table->string('batch')->nullable();
             $table->longText('message');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

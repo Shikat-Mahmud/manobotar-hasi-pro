@@ -19,7 +19,6 @@ class ReviewController extends Controller
         try {
             $request->validate([
                 'name' => 'required',
-                'batch' => 'nullable',
                 'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 'message' => 'required|string',
             ]);
