@@ -1,5 +1,5 @@
 @extends('frontend.master')
-@section('title', 'Review Form')
+@section('title', 'রিভিউ করুন')
 @section('content')
 
     <!-- BREADCRUMB SECTION START -->
