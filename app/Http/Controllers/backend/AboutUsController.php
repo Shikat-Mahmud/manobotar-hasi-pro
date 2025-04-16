@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUs;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
@@ -11,7 +12,9 @@ class AboutUsController extends Controller
     public function index()
     {
         $about = AboutUs::latest()->first();
-        return view('frontend.main.about', compact('about'));
+        $projects = Project::all();
+
+        return view('frontend.main.about', compact('about', 'projects'));
     }
 
     public function edit($id)

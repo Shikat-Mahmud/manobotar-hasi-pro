@@ -173,7 +173,8 @@ class ProjectController extends Controller
         if (!$project) {
             return redirect()->back()->with('error', 'প্রজেক্ট পাওয়া যায়নি।');
         }
-        $setting = generalSettings();
-        return view('frontend.main.project_detail', compact('project', 'setting'));
+
+        $otherProjects = Project::whereNot('id', $project->id)->get();
+        return view('frontend.main.project_detail', compact('project', 'otherProjects'));
     }
 }

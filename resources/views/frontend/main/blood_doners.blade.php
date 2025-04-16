@@ -60,9 +60,9 @@
     <!-- REGISTRATION SECTION START -->
     <div class="py-[130px] xl:py-[80px] md:py-[60px] mx-[25px]">
         <!-- actions -->
-        <div class="border-y border-[#d9d9d9] py-[24px] flex items-center xxs:flex-col gap-[20px]">
+        <div class="border-y border-[#d9d9d9] py-[24px] flex items-center justify-center xxs:flex-col gap-[20px]">
             <div
-                class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px]">
+                class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] text-center">
                 জরুরী রক্তের প্রয়োজন?</div>
             <div class="flex gap-[12px]">
                 <span
