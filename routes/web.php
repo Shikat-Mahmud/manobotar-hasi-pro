@@ -10,6 +10,7 @@ use App\Http\Controllers\backend\EventScheduleController;
 use App\Http\Controllers\backend\GalleryController;
 use App\Http\Controllers\backend\GuestController;
 use App\Http\Controllers\backend\InvestController;
+use App\Http\Controllers\backend\ProjectController;
 use App\Http\Controllers\backend\SponsorController;
 use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\EventRegisterController;
@@ -68,17 +69,17 @@ Route::get('application-cache-clear', [SettingsController::class, 'cacheClear'])
 // all settings route end //
 
 
-// all event route start //
-Route::get('/get-event-datetime', [EventController::class, 'getEventDate']);
-Route::get('/events', [EventController::class, 'index'])->name('events');
-Route::get('/add-event', [EventController::class, 'create'])->name('create.event');
-Route::post('/add-event', [EventController::class, 'store'])->name('store.event');
-Route::get('/edit-event/{id}', [EventController::class, 'edit'])->name('edit.event');
-Route::post('/edit-event/{id}', [EventController::class, 'update'])->name('update.event');
-Route::post('/destroy-event/{id}', [EventController::class, 'destroy'])->name('destroy.event');
+// all project route start //
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+Route::get('/add-project', [ProjectController::class, 'create'])->name('create.project');
+Route::post('/add-project', [ProjectController::class, 'store'])->name('store.project');
+Route::get('/edit-project/{id}', [ProjectController::class, 'edit'])->name('edit.project');
+Route::post('/edit-project/{id}', [ProjectController::class, 'update'])->name('update.project');
+Route::post('/destroy-project/{id}', [ProjectController::class, 'destroy'])->name('destroy.project');
+Route::get('/project-change-status/{id}', [ProjectController::class, 'changeStatus'])->name('project.change.status');
 
-Route::get('/event-detail', [EventController::class, 'eventDetail'])->name('event.detail');
-// all event route end //
+Route::get('/project-details/{id}', [ProjectController::class, 'projectDetail'])->name('project.details');
+// all project route end //
 
 
 // all event schedule route start //

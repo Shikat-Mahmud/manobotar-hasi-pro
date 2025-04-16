@@ -27,16 +27,10 @@ class PermissionSeeder extends Seeder
             'update-email-setting', 
             'cache-clear',
             'admin-panel',
-            'create-event', 
-            'edit-event', 
-            'show-event',
-            'delete-event',
-            'create-event-schedule', 
-            'edit-event-schedule', 
-            'show-event-schedule',
-            'delete-event-schedule',
-            'edit-register',
-            'show-register',
+            'create-project', 
+            'edit-project', 
+            'show-project',
+            'delete-project',
         ];
 
         foreach ($permissions as $permission) {
@@ -49,16 +43,11 @@ class PermissionSeeder extends Seeder
         $adminRole = Role::where('name', 'admin')->firstOrFail();
         $adminRole->givePermissionTo([
             'admin-panel',
-            'create-event', 
-            'edit-event', 
-            'show-event',
-            'create-event-schedule', 
-            'edit-event-schedule', 
-            'show-event-schedule',
+            'create-project', 
+            'edit-project', 
+            'show-project',
             'update-general-setting', 
             'cache-clear',
-            'edit-register',
-            'show-register',
         ]);
 
     }

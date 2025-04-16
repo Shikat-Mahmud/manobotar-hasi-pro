@@ -2,6 +2,7 @@
 
 use App\Models\ApplicationSetting;
 use App\Models\Event;
+use App\Models\Project;
 use App\Models\User;
 
 function generalSettings(){
@@ -9,9 +10,9 @@ function generalSettings(){
     return $application;
 }
 
-function myEvent(){
-    $event = Event::first();
-    return $event;
+function projects(){
+    $projects = Project::all();
+    return $projects;
 }
 
 function user($id)

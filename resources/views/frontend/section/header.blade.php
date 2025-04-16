@@ -1,5 +1,6 @@
 @php
     $setting = generalSettings();
+    $projects = projects();
 @endphp
 <!-- HEADER SECTION START -->
 <header
@@ -28,8 +29,10 @@
                         <a role="button">প্রজেক্ট সমূহ</a>
 
                         <ul class="et-header-submenu">
-                            <li><a href="#">All Events</a></li>
-                            <li><a href="#">Events Details</a></li>
+                            @foreach ($projects as $project)
+                                <li><a href="{{ route('project.details', $project->id) }}">{{ $project->name }}</a>
+                                </li>
+                            @endforeach                            
                         </ul>
                     </li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>

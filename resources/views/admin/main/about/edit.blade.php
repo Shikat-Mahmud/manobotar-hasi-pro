@@ -1,12 +1,5 @@
 @extends('admin.layouts.master')
 @section('title', 'প্রতিষ্ঠানের তথ্য এডিট')
-@push('styles')
-    <style>
-        .ck-editor__editable {
-            min-height: 200px;
-        }
-    </style>
-@endpush
 @section('content')
     <section class="pc-container">
         <div class="pc-content">
@@ -132,7 +125,7 @@
     </script> --}}
 
     <!-- Load the latest CKEditor 5 Classic build -->
-<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+{{-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script> --}}
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -96,6 +96,10 @@
         .table-bordered thead td {
             border-bottom-width: 2px;
         }
+
+        .ck-editor__editable {
+            min-height: 200px;
+        }
     </style>
 
     @stack('styles')
@@ -192,6 +196,7 @@
 <script src="{{ asset('js/plugins/feather.min.js') }}" type="90f9e57eb6fda3c0ef534197-text/javascript"></script>
 <script src="{{ asset('js/plugins/rocket-loader.min.js') }}" data-cf-settings="90f9e57eb6fda3c0ef534197-|49" defer>
 </script>
+<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
 <script src="{{ asset('js/popper.min.js') }}"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">

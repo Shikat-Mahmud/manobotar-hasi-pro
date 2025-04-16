@@ -24,20 +24,12 @@
                 </li>
 
                 @if (auth()->check() &&
-                        auth()->user()->hasAnyPermission(['create-event', 'edit-event', 'show-event', 'delete-event']))
+                        auth()->user()->hasAnyPermission(['create-project', 'edit-project', 'show-project', 'delete-project']))
                     <li class="pc-item pc-hasmenu">
-                        <a href="{{ route('events') }}" class="pc-link"><span class="pc-micon">
+                        <a href="{{ route('projects') }}" class="pc-link"><span class="pc-micon">
                                 <i class="ph ph-calendar"></i></span><span class="pc-mtext">প্রজেক্ট সমূহ</span></a>
                     </li>
                 @endif
-
-                {{-- @if (auth()->check() &&
-                    auth()->user()->hasAnyPermission(['create-event-schedule', 'edit-event-schedule', 'show-event-schedule', 'delete-event-schedule']))
-                    <li class="pc-item pc-hasmenu">
-                        <a href="{{ route('event.schedule') }}" class="pc-link"><span class="pc-micon">
-                                <i class="ph ph-clock"></i></span><span class="pc-mtext">Event Schedules</span></a>
-                    </li>
-                @endif --}}
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('blood-doner.list') }}" class="pc-link"><span class="pc-micon">
