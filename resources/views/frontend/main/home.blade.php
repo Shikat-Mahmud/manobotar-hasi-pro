@@ -158,7 +158,7 @@
     <!-- GALLERY SECTION END -->
 
 
-    @if (isset($doners))
+    @if ($doners->isNotEmpty())
         <!-- BLOOD DONER SECTION START -->
         <section class="et-blogs overflow-hidden pt-[130px] xl:py-[80px] md:py-[60px] relative z-[1] after:absolute"
         style="background-image: url('{{ asset('frontend/img/features-bg.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
