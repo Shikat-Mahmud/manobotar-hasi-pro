@@ -20,7 +20,8 @@
                     <div class="card bg-grd-danger order-card">
                         <div class="card-body">
                             <h2 class="text-white">মোট রক্তদাতা</h2>
-                            <h2 class="text-end text-white"><i class="ph ph-drop float-start"></i><span>{{ $totalBloodDoner }}</span>
+                            <h2 class="text-end text-white"><i
+                                    class="ph ph-drop float-start"></i><span>{{ $totalBloodDoner }}</span>
                             </h2>
                             {{-- <p class="m-b-0">Start From<span class="float-end">24</span></p> --}}
                         </div>
@@ -46,82 +47,29 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-md-6 col-xl-6 col-sm-6">
-                    <div class="card statistics-card-1 bg-brand-color-1">
-                        <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <h6 class="text-white mb-3">Total Students<span class="float-end text-white h4">{{ $totalStudent }}</span></h6>
-                            <h6 class="text-white mb-3">Total Ex Students<span class="float-end text-white h4">{{ $totalExStudent }}</span></h6>
-                            <h6 class="text-white mb-3">Total Present Students<span class="float-end text-white h4">{{ $totalPresentStudent }}</span></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-6 col-sm-6">
-                    <div class="card statistics-card-1 bg-brand-color-1">
-                        <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <h6 class="text-white mb-3">Total Teachers<span class="float-end text-white h4">{{ $totalTeachers }}</span></h6>
-                            <h6 class="text-white mb-3">Total Staffs<span class="float-end text-white h4">{{ $totalStaffs }}</span></h6>
-                            <h6 class="text-white mb-3">Total Guests<span class="float-end text-white h4">{{ $totalGuest }}</span></h6>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Amount Received From Registration</h6>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#2547; {{ $totalRegAmount }}</h3>
-                            </div>
-                            <h6 class="mt-3 text-white mb-3">Ex Students<span class="float-end text-white">{{ $totalRegAmountExStd }}</span></h6>
-                            <h6 class="text-white mb-3">Present Students<span class="float-end text-white">{{ $totalRegAmountCurStd }}</span></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3 col-sm-6">
-                    <div class="card statistics-card-1 bg-brand-color-1">
-                        <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Amount Received From Donation</h6>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#2547; {{ $totalDonAmount }}</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3 col-sm-6">
-                    <div class="card statistics-card-1 bg-brand-color-1">
-                        <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Amount Received From Sponsor</h6>
-                            </div>
-                            <div class="d-flex align-items-center mt-3">
-                                <h3 class="text-white f-w-300 d-flex align-items-center m-b-0">&#2547; {{ $totalSponAmount }}</h3>
-                            </div>
+                            <img src="{{ asset('images/widget/img-status-6.svg') }}" alt="img"
+                                class="img-fluid img-bg">
+                            <h5 class="mt-3 text-white mb-3">ডোনেশন থেকে পাওয়া<span
+                                    class="float-end text-white">&#2547;{{ $totalDonAmount }}</span></h5>
+                            <h5 class="text-white">স্পন্সর থেকে পাওয়া<span
+                                    class="float-end text-white">&#2547;{{ $totalSponAmount }}</span></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #008375;">
                         <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
+                            <img src="{{ asset('images/widget/img-status-6.svg') }}" alt="img"
+                                class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Total Amount Received</h6>
+                                <h4 class="mb-0 text-white">মোট কালেকশন</h4>
                             </div>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-money float-start"></i><span>&#2547; {{ $totalAmountReceived }}</span>
+                                    class="ph ph-money float-start"></i><span>&#2547;{{ $totalAmountReceived }}</span>
                             </h2>
                         </div>
                     </div>
@@ -129,45 +77,28 @@
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #ff4261;">
                         <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
+                            <img src="{{ asset('images/widget/img-status-6.svg') }}" alt="img"
+                                class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Total Investment</h6>
+                                <h4 class="mb-0 text-white">মোট খরচ</h4>
                             </div>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-coins float-start"></i><span>&#2547; {{ $totalInvestment }}</span>
+                                    class="ph ph-coins float-start"></i><span>&#2547;{{ $totalInvestment }}</span>
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-3 col-sm-6">
-                    <div class="card statistics-card-1 bg-warning">
-                        <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
-                                <h6 class="mb-0 text-white">Total Cash In Hand</h6>
-                            </div>
-                            <h2 class="text-end text-white"><i
-                                    class="ph ph-coins float-start"></i><span>&#2547; {{ $totalInHand }}</span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-md-6 col-xl-3 col-sm-6">
                     <div class="card statistics-card-1" style="background-color: #65467a;">
                         <div class="card-body">
-                            <img src="{{ asset('images/widget/img-status-6.svg')}}"
-                                alt="img" class="img-fluid img-bg">
-                            <div class="d-flex align-items-center">
-                                <h4 class="text-white f-w-300 d-flex align-items-center">Paid Registrations</h4>
+                            <img src="{{ asset('images/widget/img-status-6.svg') }}" alt="img"
+                                class="img-fluid img-bg">
+                            <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
+                                <h4 class="mb-0 text-white">মোট জমা টাকা</h4>
                             </div>
-                            <h6 class="mt-3 text-white mb-3">Ex Students<span class="float-end text-white">{{ $totalPaidExStd }}</span></h6>
-                            <h6 class="text-white mb-3">Present Students<span class="float-end text-white">{{ $totalPaidPreStd }}</span></h6>
-                            <h6 class="text-white mb-3">Teachers<span class="float-end text-white">{{ $totalPaidTchr }}</span></h6>
-                            <h6 class="text-white mb-3">Staffs<span class="float-end text-white">{{ $totalPaidStf }}</span></h6>
-                            <h6 class="text-white mb-3">Guests<span class="float-end text-white">{{ $totalPaidGst }}</span></h6>
+                            <h2 class="text-end text-white"><i
+                                    class="ph ph-money float-start"></i><span>&#2547;{{ $totalInHand }}</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
@@ -179,51 +110,78 @@
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Student Name</th>
-                                        <th>Photo</th>
-                                        <th>Payment Status</th>
-                                        <th>Guests</th>
-                                        <th>Amount</th>
-                                        <th>Phone</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($registrations as $item)
+                                <table class="table">
+                                    <thead>
                                         <tr>
-                                            <td>{{ $item->name }}</td>
-                                            <td>
-                                                @if ($item->photo)
-                                                    <img src="{{ asset('storage/' . $item->photo) }}" alt="Reviewer Image"
-                                                        style="height: 50px; border-radius: 6px;">
-                                                @else
-                                                    <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Default Image"
-                                                        style="height: 50px; border-radius: 6px;">
-                                                @endif
-                                            </td>
-                                            <td>
-                                                @if ($item->status == '1')
-                                                    <span class="badge bg-success">Paid</span>
-                                                @elseif($item->status == '0')
-                                                    <span class="badge bg-danger">Unpaid</span>
-                                                @endif
-                                            </td>
-                                            <td>{{ $item->guest }}</td>
-                                            <td>&#2547; {{ $item->amount }}</td>
-                                            <td>{{ $item->phone }}</td>
+                                            <th>রক্তদাতার নাম</th>
+                                            <th>ছবি</th>
+                                            <th>রক্তের গ্রুপ</th>
+                                            <th>মোবাইল নম্বর</th>
+                                            <th>ঠিকানা</th>
+                                            <th>স্ট্যাটাস</th>
                                         </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($latestBloodDoner as $member)
+                                            <tr>
+                                                <td>{{ $member->name }}</td>
+                                                <td>
+                                                    @if ($member->photo)
+                                                        <img src="{{ asset('storage/' . $member->photo) }}"
+                                                            alt="Member photo" style="height: 50px; border-radius: 6px;">
+                                                    @else
+                                                        <img src="{{ asset('assets/images/user/avatar-2.jpg') }}"
+                                                            alt="Default photo" style="height: 50px; border-radius: 6px;">
+                                                    @endif
+                                                </td>
+                                                <td><i class="ph ph-drop" style="color: #E60000"></i>
+                                                    {{ $member->blood_group }}</td>
+                                                <td><a href="tel:{{ $member->phone }}">{{ $member->phone }}</a></td>
+                                                <td>{{ $member->address }}</td>
+                                                <td>
+                                                    @if ($member->status === 1)
+                                                        <span class="badge bg-success">প্রস্তুত</span>
+                                                    @elseif($member->status === 0)
+                                                        @php
+                                                            $donatedDate = \Carbon\Carbon::parse($member->donated_at);
+                                                            $daysPassed = $donatedDate->diffInDays(now());
+                                                            $daysLeft = max(90 - $daysPassed, 0);
+
+                                                            $bnDigits = [
+                                                                '০',
+                                                                '১',
+                                                                '২',
+                                                                '৩',
+                                                                '৪',
+                                                                '৫',
+                                                                '৬',
+                                                                '৭',
+                                                                '৮',
+                                                                '৯',
+                                                            ];
+                                                            $daysLeftBn = collect(str_split($daysLeft))
+                                                                ->map(function ($digit) use ($bnDigits) {
+                                                                    return is_numeric($digit)
+                                                                        ? $bnDigits[$digit]
+                                                                        : $digit;
+                                                                })
+                                                                ->implode('');
+                                                        @endphp
+
+                                                        <span class="badge bg-danger">
+                                                            {{ $daysLeftBn }} দিন বাকি
+                                                        </span>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </div> --}}
-
+                </div>
             </div>
-
         </div>
     </div>
 @endsection

@@ -31,67 +31,21 @@ class IndexController extends Controller
             $totalBloodDoner = $this->convertToBanglaNumber(BloodDoner::where('status', 1)->count());
             $totalCommittee = $this->convertToBanglaNumber(Committee::count());
             $totalAdviser = $this->convertToBanglaNumber(Adviser::count());
-            // $registrations = EventRegister::latest()->limit(5)->get();
-            // $totalRegistration = EventRegister::count();
-            // $totalPayment = EventRegister::where('status', 1)->count();
 
-            // $totalExStudent = EventRegister::whereBetween('batch', [2000, 2023])->count();
-            // $totalPresentStudent = EventRegister::whereBetween('batch', [2024, 2026])->count();
-            // $totalStudent = $totalExStudent + $totalPresentStudent;
+            $totalDonAmount = $this->convertToBanglaNumber(Donation::sum('amount'));
+            $totalSponAmount = $this->convertToBanglaNumber(Sponsor::sum('amount'));
+            $totalAmountReceived = $this->convertToBanglaNumber(Donation::sum('amount') + Sponsor::sum('amount'));
+            $totalInvestment = $this->convertToBanglaNumber(Invest::sum('amount'));
+            $totalInHand = $this->convertToBanglaNumber((Donation::sum('amount') + Sponsor::sum('amount')) - Invest::sum('amount'));
+            
+            $totalReviewrs = $this->convertToBanglaNumber(Review::count());
 
-            // $totalTeachers = EventRegister::whereNull('batch')->where(function ($query) {
-            //     $query->where('suggestion', '!=', 'staff')
-            //         ->orWhereNull('suggestion');
-            // })->count();
-            // $totalStaffs = EventRegister::whereNull('batch')->where('suggestion', 'staff')->count();
+            $latestBloodDoner = BloodDoner::where('donated_at', '!=', null)
+            ->orderBy('donated_at', 'desc')
+            ->limit(5)
+            ->get();
 
-            // $totalGuest = EventRegister::sum('guest');
-            // $totalAttendee = $totalRegistration + $totalGuest;
-
-            // $totalRegAmount = EventRegister::where('status', 1)->sum('amount');
-            // $totalRegAmountExStd = EventRegister::where('status', 1)
-            //     ->whereNotNull('batch')
-            //     ->whereBetween('batch', [2000, 2023])
-            //     ->sum('amount');
-            // $totalRegAmountCurStd = EventRegister::where('status', 1)
-            //     ->whereNotNull('batch')
-            //     ->whereBetween('batch', [2024, 2026])
-            //     ->sum('amount');
-
-            $totalDonAmount = Donation::sum('amount');
-            $totalSponAmount = Sponsor::sum('amount');
-            // $totalAmountReceived = $totalRegAmount + $totalDonAmount + $totalSponAmount;
-            $totalInvestment = Invest::sum('amount');
-            // $totalInHand = $totalAmountReceived - $totalInvestment;
-
-            // PAID COUNT START
-
-            // $totalPaidExStd = EventRegister::where('status', 1)
-            //     ->whereNotNull('batch')
-            //     ->whereBetween('batch', [2000, 2023])
-            //     ->count();
-            // $totalPaidPreStd = EventRegister::where('status', 1)
-            //     ->whereNotNull('batch')
-            //     ->whereBetween('batch', [2024, 2026])
-            //     ->count();
-            // $totalPaidTchr = EventRegister::where('status', 1)
-            //     ->whereNull('batch')
-            //     ->whereNull('suggestion')
-            //     ->count();
-            // $totalPaidStf = EventRegister::where('status', 1)
-            //     ->whereNull('batch')
-            //     ->where('suggestion', 'LIKE', '%staff%')
-            //     ->count();
-            // $totalPaidGst = EventRegister::where('status', 1)
-            //     ->sum('guest');
-
-            // PAID COUNT END
-
-            // $event = Event::first();
-            $totalReviewrs = Review::count();
-            // $totalTeamMembers = Team::count();
-
-            return view('admin.main.index', compact( 'totalProject', 'totalBloodDoner', 'totalCommittee', 'totalAdviser', 'totalReviewrs', 'totalDonAmount', 'totalSponAmount', 'totalInvestment'));
+            return view('admin.main.index', compact( 'totalProject', 'totalBloodDoner', 'totalCommittee', 'totalAdviser', 'totalReviewrs', 'totalDonAmount', 'totalSponAmount', 'totalAmountReceived', 'totalInvestment', 'totalInHand', 'latestBloodDoner'));
         } else {
             return redirect()->back()->with('error', 'আপনার এডমিন প্যানেলের পারমিশন নেই!');
         }
@@ -109,13 +63,14 @@ class IndexController extends Controller
 
         $models = [
             'User' => User::class,
-            'EventRegister' => EventRegister::class,
+            'Project' => Project::class,
             'Donation' => Donation::class,
             'Sponsor' => Sponsor::class,
             'Invest' => Invest::class,
-            'Event' => Event::class,
             'Review' => Review::class,
-            'Team' => Team::class
+            'Committee' => Committee::class,
+            'Adviser' => Adviser::class,
+            'Blood_Doner' => BloodDoner::class
         ];
 
         $results = [];

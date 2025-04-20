@@ -6,12 +6,10 @@ use App\Http\Controllers\backend\BloodDonerController;
 use App\Http\Controllers\backend\CommitteeController;
 use App\Http\Controllers\backend\DonationController;
 use App\Http\Controllers\backend\GalleryController;
-use App\Http\Controllers\backend\GuestController;
 use App\Http\Controllers\backend\InvestController;
 use App\Http\Controllers\backend\ProjectController;
 use App\Http\Controllers\backend\SponsorController;
 use App\Http\Controllers\frontend\ContactController;
-use App\Http\Controllers\frontend\EventRegisterController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ReviewController;
 use App\Http\Controllers\ProfileController;
@@ -159,8 +157,6 @@ Route::post('/committee-destroy/{id}', [CommitteeController::class, 'destroy'])-
 Route::get('/committees', [CommitteeController::class, 'allCommittee'])->name('all.committee');
 
 Route::post('/payment-status-change/{eventRegister}', [CommitteeController::class, 'changeStatus'])->name('payment.status.change');
-Route::get('/ticket', [EventRegisterController::class, 'create'])->name('ticket');
-Route::post('/ticket-create', [EventRegisterController::class, 'store'])->name('ticket.post');
 // all register route end //
 
 
