@@ -22,7 +22,8 @@
                                 উপদেষ্টা তালিকা
                             </div>
                             <div>
-                                <a href="{{ route('create.adviser') }}" class="btn btn-primary btn-sm"> <i class="ph ph-plus"></i>
+                                <a href="{{ route('create.adviser') }}" class="btn btn-primary btn-sm"> <i
+                                        class="ph ph-plus"></i>
                                     নতুন উপদেষ্টা</a>
                             </div>
                         </div>
@@ -44,7 +45,13 @@
                                             <tr>
                                                 <td>{{ $member->name }}</td>
                                                 <td>{{ $member->title ?? '--' }}</td>
-                                                <td>{{ $member->phone ?? '--' }}</td>
+                                                <td>
+                                                    @if (isset($member->phone))
+                                                        <a href="tel:{{ $member->phone }}">{{ $member->phone }}</a>
+                                                    @else
+                                                        --
+                                                    @endif
+                                                </td>
                                                 <td>{{ $member->email ?? '--' }}</td>
                                                 <td>
                                                     @if ($member->photo)
@@ -59,14 +66,16 @@
                                                     <div class="d-flex">
 
                                                         <a class="btn btn-info btn-sm me-2"
-                                                            href="{{ route('edit.adviser', $member->id) }}"><i class="ph ph-pencil"></i> এডিট</a>
+                                                            href="{{ route('edit.adviser', $member->id) }}"><i
+                                                                class="ph ph-pencil"></i> এডিট</a>
 
                                                         <form class="deleteForm"
                                                             action="{{ route('destroy.adviser', $member->id) }}"
                                                             method="post">
                                                             @csrf
                                                             <button type="button"
-                                                                class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i> ডিলিট</button>
+                                                                class="btn btn-danger btn-sm btnDelete"><i
+                                                                    class="ph ph-trash"></i> ডিলিট</button>
                                                         </form>
                                                     </div>
                                                 </td>

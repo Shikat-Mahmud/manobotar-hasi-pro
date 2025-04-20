@@ -11,12 +11,8 @@ class CommitteeController extends Controller
 {
     public function index()
     {
-        if (auth()->check() && auth()->user()->hasAnyPermission(['edit-register', 'show-register'])) {
-            $committees = Committee::all();
-            return view('admin.main.committee.index', compact('committees'));
-        } else {
-            return redirect()->back()->with('error', 'পারমিশন নেই!');
-        }
+        $committees = Committee::orderBy('id', 'asc')->get();
+        return view('admin.main.committee.index', compact('committees'));
     }
 
 
@@ -122,7 +118,7 @@ class CommitteeController extends Controller
 
     public function allCommittee()
     {
-        $committees = Committee::all();
+        $committees = Committee::orderBy('id', 'asc')->paginate(10);
 
         return view('frontend.main.committee', compact('committees'));
     }

@@ -53,8 +53,8 @@
                                                             alt="Default photo" style="height: 50px; border-radius: 6px;">
                                                     @endif
                                                 </td>
-                                                <td>{{ $member->blood_group }}</td>
-                                                <td>{{ $member->phone }}</td>
+                                                <td><i class="ph ph-drop" style="color: #E60000"></i> {{ $member->blood_group }}</td>
+                                                <td><a href="tel:{{ $member->phone }}">{{ $member->phone }}</a></td>
                                                 <td>{{ $member->address }}</td>
                                                 <td>
                                                     @if ($member->status === 1)

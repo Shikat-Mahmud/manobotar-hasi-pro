@@ -3,17 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Adviser;
+use App\Models\BloodDoner;
+use App\Models\Committee;
 use App\Models\Donation;
 use App\Models\Event;
 use App\Models\EventRegister;
 use App\Models\Invest;
+use App\Models\Project;
 use App\Models\Review;
 use App\Models\Sponsor;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Schema;
-
 
 
 class IndexController extends Controller
@@ -23,6 +26,11 @@ class IndexController extends Controller
     {
         if (auth()->user()->can('admin-panel')) {
             $totalUsers = User::count();
+
+            $totalProject = $this->convertToBanglaNumber(Project::where('status', 1)->count());
+            $totalBloodDoner = $this->convertToBanglaNumber(BloodDoner::where('status', 1)->count());
+            $totalCommittee = $this->convertToBanglaNumber(Committee::count());
+            $totalAdviser = $this->convertToBanglaNumber(Adviser::count());
             // $registrations = EventRegister::latest()->limit(5)->get();
             // $totalRegistration = EventRegister::count();
             // $totalPayment = EventRegister::where('status', 1)->count();
@@ -83,10 +91,9 @@ class IndexController extends Controller
             $totalReviewrs = Review::count();
             // $totalTeamMembers = Team::count();
 
-            // return view('admin.main.index', compact('registrations', 'totalRegistration', 'totalPayment', 'event', 'totalReviewrs', 'totalTeamMembers', 'totalStudent', 'totalTeachers', 'totalStaffs', 'totalExStudent', 'totalPresentStudent', 'totalGuest', 'totalAttendee', 'totalRegAmount', 'totalRegAmountExStd', 'totalRegAmountCurStd', 'totalDonAmount', 'totalSponAmount', 'totalAmountReceived', 'totalInvestment', 'totalInHand', 'totalPaidExStd', 'totalPaidPreStd', 'totalPaidTchr', 'totalPaidStf', 'totalPaidGst'));
-            return view('admin.main.index', compact(   'totalReviewrs', 'totalDonAmount', 'totalSponAmount', 'totalInvestment'));
+            return view('admin.main.index', compact( 'totalProject', 'totalBloodDoner', 'totalCommittee', 'totalAdviser', 'totalReviewrs', 'totalDonAmount', 'totalSponAmount', 'totalInvestment'));
         } else {
-            return redirect()->back()->with('error', 'You do not have permission to go to admin panel.');
+            return redirect()->back()->with('error', 'আপনার এডমিন প্যানেলের পারমিশন নেই!');
         }
     }
 
@@ -142,4 +149,15 @@ class IndexController extends Controller
         // Return JSON response
         return response()->json($results);
     }
+
+    public function convertToBanglaNumber($engNum)
+    {
+        $englishNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        $banglaNum = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
+
+        $convertedNumber = str_replace($englishNum, $banglaNum, $engNum);
+
+        return $convertedNumber;
+    }
+
 }

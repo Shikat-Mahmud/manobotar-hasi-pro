@@ -4,49 +4,49 @@
     <div class="pc-container">
         <div class="pc-content">
 
-            {{-- <div class="row">
-                <div class="col-md-6 col-xl-3">
-                    <div class="card bg-grd-secondary order-card">
-                        <div class="card-body">
-                            <h6 class="text-white">Total User Registration</h6>
-                            <h2 class="text-end text-white"><i
-                                    class="ph ph-user-plus float-start"></i><span>{{ $totalRegistration }}</span>
-                            </h2>
-                            <p class="m-b-0">Payment Received<span class="float-end">{{ $totalPayment }}</span></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row">
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-success order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Event Date</h6>
-                            <h2 class="text-end text-white"><i class="ph ph-calendar float-start"></i><span>34</span>
-                            </h2>
-                            <p class="m-b-0">Start From<span class="float-end">24</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <div class="card bg-grd-warning order-card">
-                        <div class="card-body">
-                            <h6 class="text-white">Total Attendees</h6>
+                            <h2 class="text-white">মোট প্রজেক্ট</h2>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-users-three float-start"></i><span>{{ $totalAttendee }}</span></h2>
-                            <!-- <p class="m-b-0">This Month<span class="float-end">$5,032</span></p> -->
+                                    class="ph ph-kanban float-start"></i><span>{{ $totalProject }}</span>
+                            </h2>
+                            {{-- <p class="m-b-0">Payment Received<span class="float-end">{{ $totalProject }}</span></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-danger order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Total Team Members</h6>
+                            <h2 class="text-white">মোট রক্তদাতা</h2>
+                            <h2 class="text-end text-white"><i class="ph ph-drop float-start"></i><span>{{ $totalBloodDoner }}</span>
+                            </h2>
+                            {{-- <p class="m-b-0">Start From<span class="float-end">24</span></p> --}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card bg-grd-warning order-card">
+                        <div class="card-body">
+                            <h2 class="text-white">মোট কমিটি সদস্য</h2>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-users float-start"></i><span>{{ $totalTeamMembers }}</span></h2>
+                                    class="ph ph-users-three float-start"></i><span>{{ $totalCommittee }}</span></h2>
+                            <!-- <p class="m-b-0">This Month<span class="float-end">$5,032</span></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card bg-grd-secondary order-card">
+                        <div class="card-body">
+                            <h2 class="text-white">মোট উপদেষ্টা</h2>
+                            <h2 class="text-end text-white"><i
+                                    class="ph ph-users float-start"></i><span>{{ $totalAdviser }}</span></h2>
                             <!-- <p class="m-b-0">This Month<span class="float-end">$542</span></p> -->
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-6 col-sm-6">
+                {{-- <div class="col-md-6 col-xl-6 col-sm-6">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
                             <img src="{{ asset('images/widget/img-status-6.svg')}}"
@@ -220,9 +220,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-            </div> --}}
+            </div>
 
         </div>
     </div>

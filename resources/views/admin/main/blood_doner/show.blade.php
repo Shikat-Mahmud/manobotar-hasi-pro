@@ -42,7 +42,7 @@
                                 </div>
                                 <div>
                                     <span style="font-size: 18px; margin-left: 5px;"
-                                        class="ml-3"><b>{{ $doner->blood_group }}</b></span>
+                                        class="ml-3"><b><i class="ph ph-drop" style="color: #E60000"></i> {{ $doner->blood_group }}</b></span>
                                 </div>
                             </div>
                             <div class="d-flex">
@@ -51,7 +51,7 @@
                                 </div>
                                 <div>
                                     <span style="font-size: 18px; margin-left: 5px;"
-                                        class="ml-3"><b>{{ $doner->phone }}</b></span>
+                                        class="ml-3"><b><a href="tel:{{ $doner->phone }}">{{ $doner->phone }}</a></b></span>
                                 </div>
                             </div>
                             <div class="d-flex">

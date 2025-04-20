@@ -27,7 +27,7 @@
                         auth()->user()->hasAnyPermission(['create-project', 'edit-project', 'show-project', 'delete-project']))
                     <li class="pc-item pc-hasmenu">
                         <a href="{{ route('projects') }}" class="pc-link"><span class="pc-micon">
-                                <i class="ph ph-calendar"></i></span><span class="pc-mtext">প্রজেক্ট সমূহ</span></a>
+                                <i class="ph ph-kanban"></i></span><span class="pc-mtext">প্রজেক্ট সমূহ</span></a>
                     </li>
                 @endif
 
@@ -41,13 +41,10 @@
                             <i class="ph ph-users"></i></span><span class="pc-mtext">উপদেষ্টা মণ্ডলী</span></a>
                 </li>
 
-                @if (auth()->check() &&
-                        auth()->user()->hasAnyPermission(['edit-register', 'show-register']))
-                    <li class="pc-item pc-hasmenu">
-                        <a href="{{ route('committee.list') }}" class="pc-link"><span class="pc-micon">
-                                <i class="ph ph-users-three"></i></span><span class="pc-mtext">কমিটির সদস্য</span></a>
-                    </li>
-                @endif
+                <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('committee.list') }}" class="pc-link"><span class="pc-micon">
+                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">কমিটির সদস্য</span></a>
+                </li>
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('show.about') }}" class="pc-link"><span class="pc-micon">

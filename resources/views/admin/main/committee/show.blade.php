@@ -49,7 +49,7 @@
                                     <b><span>মোবাইল নংঃ </span></b>
                                 </div>
                                 <div class="col-md-8">
-                                    <p class="ml-3">{{ $committee->phone ?? '--' }}</p>
+                                    <p class="ml-3"><a href="tel:{{ $committee->phone }}">{{ $committee->phone }}</a></p>
                                 </div>
                             </div>
 
