@@ -4,7 +4,7 @@
     <div class="pc-container">
         <div class="pc-content">
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-secondary order-card">
                         <div class="card-body">
@@ -222,7 +222,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> --}}
 
         </div>
     </div>

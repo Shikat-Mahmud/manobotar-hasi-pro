@@ -74,11 +74,6 @@
                             <i class="ph ph-coins"></i></span><span class="pc-mtext">খরচ সমূহ</span></a>
                 </li>
 
-                {{-- <li class="pc-item pc-hasmenu">
-                    <a href="{{ route('guests') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-user"></i></span><span class="pc-mtext">Our Guests</span></a>
-                </li> --}}
-
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('reviews') }}" class="pc-link"><span class="pc-micon">
                             <i class="ph ph-chat"></i></span><span class="pc-mtext">রিভিউ</span></a>

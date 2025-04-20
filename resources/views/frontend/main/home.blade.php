@@ -185,7 +185,7 @@
                     </div>
                 </div>
 
-                <div class="et-2-blogs-slider swiper p-[30px] -m-[30px]">
+                <div class="et-2-blogs-slider swiper p-[30px]">
                     <div class="swiper-wrapper">
 
                         @foreach ($projects as $project)

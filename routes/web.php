@@ -5,8 +5,6 @@ use App\Http\Controllers\backend\AdviserController;
 use App\Http\Controllers\backend\BloodDonerController;
 use App\Http\Controllers\backend\CommitteeController;
 use App\Http\Controllers\backend\DonationController;
-use App\Http\Controllers\backend\EventController;
-use App\Http\Controllers\backend\EventScheduleController;
 use App\Http\Controllers\backend\GalleryController;
 use App\Http\Controllers\backend\GuestController;
 use App\Http\Controllers\backend\InvestController;
@@ -16,7 +14,6 @@ use App\Http\Controllers\frontend\ContactController;
 use App\Http\Controllers\frontend\EventRegisterController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\ReviewController;
-use App\Http\Controllers\frontend\TeamController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingsController;
@@ -80,28 +77,6 @@ Route::get('/project-change-status/{id}', [ProjectController::class, 'changeStat
 
 Route::get('/project-details/{id}', [ProjectController::class, 'projectDetail'])->name('project.details');
 // all project route end //
-
-
-// all event schedule route start //
-Route::get('/event-schedule', [EventScheduleController::class, 'index'])->name('event.schedule');
-Route::get('/add-event-schedule', [EventScheduleController::class, 'create'])->name('create.event.schedule');
-Route::post('/add-event-schedule', [EventScheduleController::class, 'store'])->name('store.event.schedule');
-Route::get('/edit-event-schedule/{id}', [EventScheduleController::class, 'edit'])->name('edit.event.schedule');
-Route::post('/edit-event-schedule/{id}', [EventScheduleController::class, 'update'])->name('update.event.schedule');
-Route::post('/destroy-event-schedule/{id}', [EventScheduleController::class, 'destroy'])->name('destroy.event.schedule');
-// all event schedule route end //
-
-
-// all event guest route start //
-Route::middleware('auth')->group(function () {
-    Route::get('/guests', [GuestController::class, 'index'])->name('guests');
-    Route::get('/add-guest', [GuestController::class, 'create'])->name('create.guest');
-    Route::post('/add-guest', [GuestController::class, 'store'])->name('store.guest');
-    Route::get('/edit-guest/{id}', [GuestController::class, 'edit'])->name('edit.guest');
-    Route::post('/edit-guest/{id}', [GuestController::class, 'update'])->name('update.guest');
-    Route::post('/destroy-guest/{id}', [GuestController::class, 'destroy'])->name('destroy.guest');
-});
-// all event guest route end //
 
 
 // all review route start //
