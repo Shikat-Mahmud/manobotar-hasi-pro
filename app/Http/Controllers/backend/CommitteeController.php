@@ -36,16 +36,16 @@ class CommitteeController extends Controller
                 'other_info' => 'nullable|string',
             ]);
 
-            $adviser = new Committee();
-            $adviser->name = $request->name;
-            $adviser->position = $request->position;
-            $adviser->phone = $request->phone;
-            $adviser->email = $request->email;
-            $adviser->blood_group = $request->blood_group;
+            $committee = new Committee();
+            $committee->name = $request->name;
+            $committee->position = $request->position;
+            $committee->phone = $request->phone;
+            $committee->email = $request->email;
+            $committee->blood_group = $request->blood_group;
             if ($request->hasFile('photo')) {
-                $adviser->photo = $request->file('photo')->store('committees', 'public');
+                $committee->photo = $request->file('photo')->store('committees', 'public');
             }
-            $adviser->save();
+            $committee->save();
 
             return redirect()->route('committee.list')->with('success', 'কমিটির সদস্য যোগ করা হয়েছে!');
         } catch (\Exception $e) {
@@ -74,22 +74,22 @@ class CommitteeController extends Controller
                 'other_info' => 'nullable|string',
             ]);
 
-            $adviser = Committee::findOrFail($id);
+            $committee = Committee::findOrFail($id);
 
-            $adviser->name = $request->input('name');
-            $adviser->position = $request->input('position');
-            $adviser->phone = $request->input('phone');
-            $adviser->email = $request->input('email');
-            $adviser->blood_group = $request->input('blood_group');
+            $committee->name = $request->input('name');
+            $committee->position = $request->input('position');
+            $committee->phone = $request->input('phone');
+            $committee->email = $request->input('email');
+            $committee->blood_group = $request->input('blood_group');
             if ($request->hasFile('photo')) {
-                if ($adviser->photo) {
-                    Storage::delete('public/' . $adviser->photo);
+                if ($committee->photo) {
+                    Storage::delete('public/' . $committee->photo);
                 }
 
-                $adviser->photo = $request->file('photo')->store('committees', 'public');
+                $committee->photo = $request->file('photo')->store('committees', 'public');
             }
 
-            $adviser->save();
+            $committee->save();
 
             return redirect()->route('committee.list')->with('success', 'কমিটির তথ্য আপডেট করা হয়েছে!');
         } catch (\Exception $e) {

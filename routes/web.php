@@ -8,6 +8,7 @@ use App\Http\Controllers\backend\DonationController;
 use App\Http\Controllers\backend\ForeignCommitteeController;
 use App\Http\Controllers\backend\GalleryController;
 use App\Http\Controllers\backend\InvestController;
+use App\Http\Controllers\backend\MemberController;
 use App\Http\Controllers\backend\ProjectController;
 use App\Http\Controllers\backend\SponsorController;
 use App\Http\Controllers\frontend\ContactController;
@@ -171,6 +172,20 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/foreign-committees', [ForeignCommitteeController::class, 'allForeignCommittee'])->name('all.foreign');
+// all foreign route end //
+
+
+// all foreign route start //
+Route::middleware('auth')->group(function () {
+    Route::get('/member-list', [MemberController::class, 'index'])->name('member.list');
+    Route::get('/member-create', [MemberController::class, 'create'])->name('member.create');
+    Route::post('/member-store', [MemberController::class, 'store'])->name('member.store');
+    Route::get('/member-edit/{id}', [MemberController::class, 'edit'])->name('member.edit');
+    Route::post('/member-update/{id}', [MemberController::class, 'update'])->name('member.update');
+    Route::post('/member-destroy/{id}', [MemberController::class, 'destroy'])->name('member.destroy');
+});
+
+Route::get('/members', [MemberController::class, 'allMembers'])->name('all.member');
 // all foreign route end //
 
 

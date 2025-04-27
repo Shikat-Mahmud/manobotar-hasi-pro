@@ -18,33 +18,33 @@
                         <form action="{{ route('committee.update', $committee->id) }}" method="post" enctype="multipart/form-data" class="mt-3">
                             @csrf
                             <div class="row mt-3">
-                                <label for="name" class="col-md-4 font-lato font-semibold text-etBlack">নাম: <span class="text-danger">*</span></label>
+                                <label for="name" class="col-md-4 font-lato font-semibold text-etBlack">নামঃ <span class="text-danger">*</span></label>
                                 <div class="col-md-8">
                                     <input type="text" name="name" id="name" placeholder="নাম" value="{{ old('name', $committee->name) }}" class="form-control" required>
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="position" class="col-md-4 font-lato font-semibold text-etBlack">পজিশন: </label>
+                                <label for="position" class="col-md-4 font-lato font-semibold text-etBlack">পজিশনঃ </label>
                                 <div class="col-md-8">
                                     <input type="text" name="position" id="position" placeholder="পজিশন" value="{{ old('position', $committee->position) }}" class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="email" class="col-md-4 font-lato font-semibold text-etBlack">ইমেইল: </label>
+                                <label for="email" class="col-md-4 font-lato font-semibold text-etBlack">ইমেইলঃ </label>
                                 <div class="col-md-8">
                                     <input type="email" name="email" id="email" placeholder="ইমেইল" value="{{ old('email', $committee->email) }}" class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="phone" class="col-md-4 font-lato font-semibold text-etBlack">মোবাইল: </label>
+                                <label for="phone" class="col-md-4 font-lato font-semibold text-etBlack">মোবাইলঃ </label>
                                 <div class="col-md-8">
                                     <input type="tel" name="phone" id="phone" placeholder="মোবাইল" value="{{ old('phone', $committee->phone) }}" class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="blood_group" class="col-md-4 required">রক্তের গ্রুপ</label>
+                                <label for="blood_group" class="col-md-4 required">রক্তের গ্রুপঃ </label>
                                 <div class="col-md-8">
-                                    <select name="blood_group" class="form-control">
+                                    <select name="blood_group" id="blood_group" class="form-control">
                                         <option value="">রক্তের গ্রুপ নির্বাচন করুন</option>
                                         <option value="A+" {{ old('blood_group', $committee->blood_group) == "A+" ? 'selected' : '' }}>A+</option>
                                         <option value="A-" {{ old('blood_group', $committee->blood_group) == "A-" ? 'selected' : '' }}>A-</option>

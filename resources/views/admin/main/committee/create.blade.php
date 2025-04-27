@@ -20,31 +20,31 @@
                             <div class="row mt-3">
                                 <label for="name" class="col-md-4 required">নাম <span class="text-danger">*</span></label>
                                 <div class="col-md-8">
-                                    <input type="text" name="name" class="form-control" placeholder="নাম" required/>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="নাম" required/>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <label for="position" class="col-md-4 required">পজিশন</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="position" class="form-control" placeholder="পজিশন"/>
+                                    <input type="text" id="position" name="position" class="form-control" placeholder="পজিশন"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <label for="phone" class="col-md-4 required">মোবাইল</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="phone" class="form-control" placeholder="মোবাইল"/>
+                                    <input type="text" id="phone" name="phone" class="form-control" placeholder="মোবাইল"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <label for="email" class="col-md-4 required">ইমেইল</label>
                                 <div class="col-md-8">
-                                    <input type="text" name="email" class="form-control" placeholder="ইমেইল"/>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="ইমেইল"/>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <label for="blood_group" class="col-md-4 required">রক্তের গ্রুপ</label>
                                 <div class="col-md-8">
-                                    <select name="blood_group" class="form-control">
+                                    <select name="blood_group" id="blood_group" class="form-control">
                                         <option value="">রক্তের গ্রুপ নির্বাচন করুন</option>
                                         <option value="A+">A+</option>
                                         <option value="A-">A-</option>

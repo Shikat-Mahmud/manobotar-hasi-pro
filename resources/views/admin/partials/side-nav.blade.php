@@ -37,18 +37,17 @@
                 </li>
 
                 <li class="pc-item pc-hasmenu">
-                    <a href="{{ route('adviser.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-users"></i></span><span class="pc-mtext">উপদেষ্টা পরিষদ</span></a>
-                </li>
-
-                <li class="pc-item pc-hasmenu">
-                    <a href="{{ route('committee.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">কার্যকরী পরিষদ</span></a>
-                </li>
-
-                <li class="pc-item pc-hasmenu">
-                    <a href="{{ route('foreign.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">প্রবাসী পরিষদ</span></a>
+                    <a href="#!" class="pc-link"><span class="pc-micon">
+                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">কমিটি</span><span
+                            class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                    <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link" href="{{ route('adviser.list') }}">উপদেষ্টা পরিষদ</a>
+                        </li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('committee.list') }}">কার্যকরী পরিষদ</a>
+                        </li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('foreign.list') }}">প্রবাসী পরিষদ</a></li>
+                        <li class="pc-item"><a class="pc-link" href="{{ route('member.list') }}">সদস্য তালিকা</a></li>
+                    </ul>
                 </li>
 
                 <li class="pc-item pc-hasmenu">

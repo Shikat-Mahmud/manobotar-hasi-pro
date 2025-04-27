@@ -36,16 +36,16 @@ class ForeignCommitteeController extends Controller
                 'other_info' => 'nullable|string',
             ]);
 
-            $adviser = new ForeignCommittee();
-            $adviser->name = $request->name;
-            $adviser->position = $request->position;
-            $adviser->phone = $request->phone;
-            $adviser->email = $request->email;
-            $adviser->blood_group = $request->blood_group;
+            $foreignCommittee = new ForeignCommittee();
+            $foreignCommittee->name = $request->name;
+            $foreignCommittee->position = $request->position;
+            $foreignCommittee->phone = $request->phone;
+            $foreignCommittee->email = $request->email;
+            $foreignCommittee->blood_group = $request->blood_group;
             if ($request->hasFile('photo')) {
-                $adviser->photo = $request->file('photo')->store('foreign_committees', 'public');
+                $foreignCommittee->photo = $request->file('photo')->store('foreign_committees', 'public');
             }
-            $adviser->save();
+            $foreignCommittee->save();
 
             return redirect()->route('foreign.list')->with('success', 'কমিটির সদস্য যোগ করা হয়েছে!');
         } catch (\Exception $e) {
@@ -75,22 +75,22 @@ class ForeignCommitteeController extends Controller
                 'other_info' => 'nullable|string',
             ]);
 
-            $adviser = ForeignCommittee::findOrFail($id);
+            $foreignCommittee = ForeignCommittee::findOrFail($id);
 
-            $adviser->name = $request->input('name');
-            $adviser->position = $request->input('position');
-            $adviser->phone = $request->input('phone');
-            $adviser->email = $request->input('email');
-            $adviser->blood_group = $request->input('blood_group');
+            $foreignCommittee->name = $request->input('name');
+            $foreignCommittee->position = $request->input('position');
+            $foreignCommittee->phone = $request->input('phone');
+            $foreignCommittee->email = $request->input('email');
+            $foreignCommittee->blood_group = $request->input('blood_group');
             if ($request->hasFile('photo')) {
-                if ($adviser->photo) {
-                    Storage::delete('public/' . $adviser->photo);
+                if ($foreignCommittee->photo) {
+                    Storage::delete('public/' . $foreignCommittee->photo);
                 }
 
-                $adviser->photo = $request->file('photo')->store('foreign_committees', 'public');
+                $foreignCommittee->photo = $request->file('photo')->store('foreign_committees', 'public');
             }
 
-            $adviser->save();
+            $foreignCommittee->save();
 
             return redirect()->route('foreign.list')->with('success', 'কমিটির তথ্য আপডেট করা হয়েছে!');
         } catch (\Exception $e) {
