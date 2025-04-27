@@ -26,7 +26,7 @@
                     <li><a href="{{ route('home') }}">হোম</a></li>
                     <li><a href="{{ route('about') }}">আমাদের মিশন</a></li>
                     <li class="has-sub-menu relative">
-                        <a role="button">প্রজেক্ট সমূহ</a>
+                        <a role="button">প্রজেক্ট সমূহ <i class="fa fa-angle-down"></i></a>
 
                         <ul class="et-header-submenu">
                             @foreach ($projects as $project)
@@ -35,9 +35,15 @@
                             @endforeach                            
                         </ul>
                     </li>
+                    <li class="has-sub-menu relative">
+                        <a role="button">কমিটি <i class="fa fa-angle-down"></i></a>
+
+                        <ul class="et-header-submenu">
+                            <li><a href="{{ route('all.committee') }}">কার্যকরী পরিষদ</a></li>
+                            <li><a href="{{ route('advisers') }}">উপদেষ্টা পরিষদ</a></li>                        
+                        </ul>
+                    </li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>
-                    <li><a href="{{ route('advisers') }}">উপদেষ্টা মণ্ডলী</a></li>
-                    <li><a href="{{ route('all.committee') }}">কমিটি</a></li>
                     <li><a href="{{ route('gallery') }}">ছবি গ্যালারি</a></li>
                     <li><a href="{{ route('our.doner') }}">ডোনেশন</a></li>
                     <li><a href="{{ route('contact') }}">যোগাযোগ</a></li>

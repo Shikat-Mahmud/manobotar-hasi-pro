@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'নতুন কমিটি সদস্য যোগ')
+@section('title', 'নতুন সদস্য যোগ')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -8,10 +8,10 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <div>
-                            <h4>নতুন কমিটি সদস্য যোগ করুন</h4>
+                            <h4>নতুন সদস্য যোগ করুন</h4>
                         </div>
                         <div>
-                            <a href="{{ route('committee.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> কমিটির সদস্য তালিকা</a>
+                            <a href="{{ route('committee.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> কার্যকরী পরিষদ</a>
                         </div>
                     </div>
                     <div class="card-body">

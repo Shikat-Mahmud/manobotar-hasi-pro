@@ -1,5 +1,5 @@
 @extends('frontend.master')
-@section('title', 'কমিটি')
+@section('title', 'কার্যকরী পরিষদ')
 
 @section('content')
     <!-- BREADCRUMB SECTION START -->
@@ -7,11 +7,11 @@
         class="et-breadcrumb bg-[#000D83] pt-[146px] lg:pt-[146px] sm:pt-[146px] pb-[130px] lg:pb-[110px] sm:pb-[80px] relative z-[1] before:absolute before:inset-0 before:-z-[1] before:opacity-30"
         style="background-image: url('{{ asset('frontend/img/page-bg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full text-center text-white">
-            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">কমিটি</h1>
+            <h1 class="et-breadcrumb-title font-medium text-[56px] md:text-[50px] xs:text-[45px]">কার্যকরী পরিষদ</h1>
             <ul class="inline-flex items-center gap-[10px] font-medium text-[16px]">
                 <li class="opacity-80"><a href="{{ route('home') }}" class="hover:text-etBlue">হোম</a></li>
                 <li><i class="fa-solid fa-angle-right"></i><i class="fa-solid fa-angle-right"></i></li>
-                <li class="current-page">কমিটি</li>
+                <li class="current-page">কার্যকরী পরিষদ</li>
             </ul>
         </div>
     </section>
@@ -21,7 +21,7 @@
     <div class="py-[130px] xl:py-[80px] md:py-[60px] mx-[25px]">
         @if ($committees->isNotEmpty())
             <div id="all" class="tabcontent" style="display: block;">
-                <h3 class="text-[24px] py-[16px]">কমিটির সদস্যগন</h3>
+                <h3 class="text-[24px] py-[16px]">কার্যকরী পরিষদের সদস্যগণ</h3>
                 <div
                     class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
                     @foreach ($committees as $member)
@@ -51,7 +51,7 @@
             </div>
         @else
             <div class="flex flex-col justify-center items-center">
-                <h3 class="text-center text-[2.4rem] text-[#757277]">কোনো সদস্য পাওয়া যায়নি!</h3>
+                <h3 class="text-center text-[2.4rem] text-[#757277]">কোনো কার্যকরী পরিষদ সদস্য পাওয়া যায়নি!</h3>
                 <img src="{{ asset('images/empty.jpg') }}" alt="Photo" class="w-[350px] my-[30px]">
             </div>
         @endif

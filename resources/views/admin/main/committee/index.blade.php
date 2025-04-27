@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'কমিটির সদস্য তালিকা')
+@section('title', 'কার্যকরী পরিষদ')
 @push('styles')
     <style>
         .desc-box {
@@ -23,7 +23,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <div>
                                 <i class="fas fa-table me-1"></i>
-                                কমিটির সদস্য তালিকা
+                                কার্যকরী পরিষদ
                             </div>
                             <div>
                                 <a href="{{ route('committee.create') }}" class="btn btn-primary btn-sm"> <i

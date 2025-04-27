@@ -176,7 +176,7 @@
                                             class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                     </svg>
                                 </span>
-                                <span class="txt">উপদেষ্টা মণ্ডলী</span>
+                                <span class="txt">উপদেষ্টা পরিষদ</span>
                             </a>
                         </li>
                         <li>
@@ -190,7 +190,7 @@
                                             class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
                                     </svg>
                                 </span>
-                                <span class="txt">কমিটি</span>
+                                <span class="txt">কার্যকরী পরিষদ</span>
                             </a>
                         </li>
                         {{-- <li>

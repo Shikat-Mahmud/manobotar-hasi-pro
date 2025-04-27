@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'উপদেষ্টা তালিকা')
+@section('title', 'উপদেষ্টা পরিষদ')
 @push('styles')
     <style>
         .desc-box {
@@ -19,7 +19,7 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <div>
                                 <i class="fas fa-table me-1"></i>
-                                উপদেষ্টা তালিকা
+                                উপদেষ্টা পরিষদ
                             </div>
                             <div>
                                 <a href="{{ route('create.adviser') }}" class="btn btn-primary btn-sm"> <i

@@ -38,12 +38,12 @@
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('adviser.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-users"></i></span><span class="pc-mtext">উপদেষ্টা মণ্ডলী</span></a>
+                            <i class="ph ph-users"></i></span><span class="pc-mtext">উপদেষ্টা পরিষদ</span></a>
                 </li>
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('committee.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">কমিটির সদস্য</span></a>
+                            <i class="ph ph-users-three"></i></span><span class="pc-mtext">কার্যকরী পরিষদ</span></a>
                 </li>
 
                 <li class="pc-item pc-hasmenu">

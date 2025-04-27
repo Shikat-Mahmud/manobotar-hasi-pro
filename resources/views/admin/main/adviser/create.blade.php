@@ -11,7 +11,7 @@
                             <h4>নতুন উপদেষ্টা যোগ করুন</h4>
                         </div>
                         <div>
-                            <a href="{{ route('adviser.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> উপদেষ্টা তালিকা</a>
+                            <a href="{{ route('adviser.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> উপদেষ্টা পরিষদ</a>
                         </div>
                     </div>
                     <div class="card-body">

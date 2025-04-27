@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'উপদেষ্টা এডিট')
+@section('title', 'উপদেষ্টার তথ্য এডিট')
 @section('content')
 <section class="pc-container">
     <div class="pc-content">
@@ -11,7 +11,7 @@
                             <h4>উপদেষ্টার তথ্য এডিট করুন</h4>
                         </div>
                         <div>
-                            <a href="{{ route('adviser.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> উপদেষ্টা তালিকা</a>
+                            <a href="{{ route('adviser.list') }}" class="btn btn-primary btn-sm"><i class="fas fa-arrow-left mr-2 "></i> উপদেষ্টা পরিষদ</a>
                         </div>
                     </div>
                     <div class="card-body">
