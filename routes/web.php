@@ -5,6 +5,7 @@ use App\Http\Controllers\backend\AdviserController;
 use App\Http\Controllers\backend\BloodDonerController;
 use App\Http\Controllers\backend\CommitteeController;
 use App\Http\Controllers\backend\DonationController;
+use App\Http\Controllers\backend\ForeignCommitteeController;
 use App\Http\Controllers\backend\GalleryController;
 use App\Http\Controllers\backend\InvestController;
 use App\Http\Controllers\backend\ProjectController;
@@ -143,21 +144,34 @@ Route::get('/about', [AboutUsController::class, 'index'])->name('about');
 // all about us route end //
 
 
-// all register route start //
+// all committee route start //
 Route::middleware('auth')->group(function () {
-Route::get('/committee-list', [CommitteeController::class, 'index'])->name('committee.list');
-Route::get('/committee-create', [CommitteeController::class, 'create'])->name('committee.create');
-Route::post('/committee-store', [CommitteeController::class, 'store'])->name('committee.store');
-Route::get('/committee-edit/{id}', [CommitteeController::class, 'edit'])->name('committee.edit');
-Route::post('/committee-update/{id}', [CommitteeController::class, 'update'])->name('committee.update');
-Route::get('/committee-show/{id}', [CommitteeController::class, 'show'])->name('committee.show');
-Route::post('/committee-destroy/{id}', [CommitteeController::class, 'destroy'])->name('committee.destroy');
+    Route::get('/committee-list', [CommitteeController::class, 'index'])->name('committee.list');
+    Route::get('/committee-create', [CommitteeController::class, 'create'])->name('committee.create');
+    Route::post('/committee-store', [CommitteeController::class, 'store'])->name('committee.store');
+    Route::get('/committee-edit/{id}', [CommitteeController::class, 'edit'])->name('committee.edit');
+    Route::post('/committee-update/{id}', [CommitteeController::class, 'update'])->name('committee.update');
+    Route::get('/committee-show/{id}', [CommitteeController::class, 'show'])->name('committee.show');
+    Route::post('/committee-destroy/{id}', [CommitteeController::class, 'destroy'])->name('committee.destroy');
 });
 
 Route::get('/committees', [CommitteeController::class, 'allCommittee'])->name('all.committee');
+// all committee route end //
 
-Route::post('/payment-status-change/{eventRegister}', [CommitteeController::class, 'changeStatus'])->name('payment.status.change');
-// all register route end //
+
+// all foreign route start //
+Route::middleware('auth')->group(function () {
+    Route::get('/foreign-committee-list', [ForeignCommitteeController::class, 'index'])->name('foreign.list');
+    Route::get('/foreign-committee-create', [ForeignCommitteeController::class, 'create'])->name('foreign.create');
+    Route::post('/foreign-committee-store', [ForeignCommitteeController::class, 'store'])->name('foreign.store');
+    Route::get('/foreign-committee-edit/{id}', [ForeignCommitteeController::class, 'edit'])->name('foreign.edit');
+    Route::post('/foreign-committee-update/{id}', [ForeignCommitteeController::class, 'update'])->name('foreign.update');
+    Route::get('/foreign-committee-show/{id}', [ForeignCommitteeController::class, 'show'])->name('foreign.show');
+    Route::post('/foreign-committee-destroy/{id}', [ForeignCommitteeController::class, 'destroy'])->name('foreign.destroy');
+});
+
+Route::get('/foreign-committees', [ForeignCommitteeController::class, 'allForeignCommittee'])->name('all.foreign');
+// all foreign route end //
 
 
 // all gallery route start //

@@ -39,8 +39,9 @@
                         <a role="button">কমিটি <i class="fa fa-angle-down"></i></a>
 
                         <ul class="et-header-submenu">
+                            <li><a href="{{ route('advisers') }}">উপদেষ্টা পরিষদ</a></li>
                             <li><a href="{{ route('all.committee') }}">কার্যকরী পরিষদ</a></li>
-                            <li><a href="{{ route('advisers') }}">উপদেষ্টা পরিষদ</a></li>                        
+                            <li><a href="{{ route('all.foreign') }}">প্রবাসী পরিষদ</a></li>
                         </ul>
                     </li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>

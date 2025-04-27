@@ -193,6 +193,20 @@
                                 <span class="txt">কার্যকরী পরিষদ</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('all.foreign') }}"
+                                class="flex items-center gap-[10px] hover:text-etBlue group">
+                                <span class="icon">
+                                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 15.875V2.28125C0 1.51953 0.615234 0.875 1.40625 0.875H9.84375C10.6055 0.875 11.25 1.51953 11.25 2.28125V15.875L5.625 12.5938L0 15.875Z"
+                                            class="fill-transparent stroke-white group-hover:stroke-etBlue group-hover:fill-etBlue transition" />
+                                    </svg>
+                                </span>
+                                <span class="txt">প্রবাসী পরিষদ</span>
+                            </a>
+                        </li>
                         {{-- <li>
                             <a href="{{ route('gallery') }}"
                                 class="flex items-center gap-[10px] hover:text-etBlue group">
