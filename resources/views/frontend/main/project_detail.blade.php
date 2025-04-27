@@ -88,9 +88,9 @@
 
                     <!-- actions -->
                     <div class="border-y border-[#d9d9d9] py-[24px] flex items-center xxs:flex-col gap-[20px]">
-                        <a href="{{ route('ticket') }}"
+                        <span 
                             class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] hover:bg-etGray">সাহায্য
-                            পাঠাতে চান?</a>
+                            পাঠাতে চান?</span>
                         <div class="flex gap-[12px]">
                             <span
                                 class="icon bg-etBlue w-[50px] aspect-square rounded-full outline-[2px] outline outline-white -outline-offset-[3px] flex items-center justify-center">

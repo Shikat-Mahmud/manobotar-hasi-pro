@@ -12,8 +12,7 @@ class ContactController extends Controller
     public function index()
     {
         $settings = generalSettings();
-        $event = Event::first();
-        return view('frontend.main.contact', compact('settings', 'event'));
+        return view('frontend.main.contact', compact('settings'));
     }
 
     public function store(Request $request)
