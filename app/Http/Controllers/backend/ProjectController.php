@@ -52,6 +52,7 @@ class ProjectController extends Controller
                 'slogan' => 'nullable|string',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
                 'description' => 'nullable|string',
+                'project_photos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             ]);
 
             $project = new Project();
@@ -60,6 +61,14 @@ class ProjectController extends Controller
 
             if ($request->hasFile('image')) {
                 $project->image = $request->file('image')->store('projects', 'public');
+            }
+
+            if ($request->hasFile('project_photos')) {
+                $photos = [];
+                foreach ($request->file('project_photos') as $file) {
+                    $photos[] = $file->store('projects', 'public');
+                }
+                $project->project_photos = $photos;
             }
 
             $project->description = $request->description;
@@ -74,9 +83,18 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(int $id)
     {
-        //
+        $project = Project::find($id);
+        if (!$project) {
+            return redirect()->back()->with('error', 'প্রজেক্ট পাওয়া যায়নি।');
+        }
+
+        if (auth()->user()->can('show-project')) {
+            return view('admin.main.project.show', compact('project'));
+        } else {
+            return redirect()->back()->with('error', 'আপনার প্রজেক্ট দেখার অনুমতি নেই।');
+        }
     }
 
     /**
@@ -108,21 +126,34 @@ class ProjectController extends Controller
                 'slogan' => 'nullable|string',
                 'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
                 'description' => 'nullable|string',
+                'project_photos.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
             $project->name = $request->name;
             $project->slogan = $request->slogan;
 
+            // Update logo image if new one is uploaded
             if ($request->hasFile('image')) {
                 $project->image = $request->file('image')->store('projects', 'public');
             }
 
+            // Handle multiple photos
+            $existingPhotos = is_array($project->project_photos) ? $project->project_photos : [];
+
+            if ($request->hasFile('project_photos')) {
+                foreach ($request->file('project_photos') as $photo) {
+                    $path = $photo->store('projects', 'public');
+                    $existingPhotos[] = $path;
+                }
+            }
+
+            $project->project_photos = $existingPhotos;
             $project->description = $request->description;
             $project->save();
 
             return redirect()->route('projects')->with('success', 'প্রজেক্ট সফলভাবে আপডেট হয়েছে।');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'ত্রুটি ঘটেছে: ' . $e->getMessage());
         }
     }
 
@@ -164,6 +195,29 @@ class ProjectController extends Controller
             return redirect()->back()->with('success', 'প্রজেক্টের স্ট্যাটাস সফলভাবে পরিবর্তন হয়েছে।');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
+    }
+
+    public function deletePhoto(Project $project, $index)
+    {
+        try {
+            $photos = $project->project_photos; // already an array due to model cast
+
+            if (isset($photos[$index])) {
+                // Delete file from storage
+                Storage::disk('public')->delete($photos[$index]);
+
+                // Remove the photo from the array
+                array_splice($photos, $index, 1);
+                $project->project_photos = $photos;
+                $project->save();
+
+                return redirect()->back()->with('success', 'ছবি সফলভাবে মুছে ফেলা হয়েছে।');
+            }
+
+            return redirect()->back()->with('error', 'ছবি খুঁজে পাওয়া যায়নি।');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'ত্রুটি ঘটেছে: ' . $e->getMessage());
         }
     }
 

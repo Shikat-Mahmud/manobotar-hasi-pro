@@ -53,6 +53,9 @@
                                                 <td class="desc-box">{{ $item->shortDescription }}</td>
                                                 <td>
                                                     <div class="d-flex">
+                                                        <a class="btn btn-secondary btn-sm me-2"
+                                                            href="{{ route('show.project', $item->id) }}"><i
+                                                                class="ph ph-eye"></i> দেখুন</a>
                                                         <a class="btn btn-info btn-sm me-2"
                                                             href="{{ route('edit.project', $item->id) }}"><i
                                                                 class="ph ph-pencil"></i> এডিট</a>
@@ -85,9 +88,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 @endsection

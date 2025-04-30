@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'project_photos' => 'array',
+    ];
+    
 }

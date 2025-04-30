@@ -73,7 +73,9 @@ Route::post('/add-project', [ProjectController::class, 'store'])->name('store.pr
 Route::get('/edit-project/{id}', [ProjectController::class, 'edit'])->name('edit.project');
 Route::post('/edit-project/{id}', [ProjectController::class, 'update'])->name('update.project');
 Route::post('/destroy-project/{id}', [ProjectController::class, 'destroy'])->name('destroy.project');
+Route::get('/show-project/{id}', [ProjectController::class, 'show'])->name('show.project');
 Route::get('/project-change-status/{id}', [ProjectController::class, 'changeStatus'])->name('project.change.status');
+Route::delete('/projects/{project}/photo/{index}', [ProjectController::class, 'deletePhoto'])->name('project.photo.delete');
 
 Route::get('/project-details/{id}', [ProjectController::class, 'projectDetail'])->name('project.details');
 // all project route end //

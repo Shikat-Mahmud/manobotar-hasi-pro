@@ -34,9 +34,15 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <label for="image" class="col-md-4">ছবিঃ </label>
+                                <label for="image" class="col-md-4">লোগোঃ </label>
                                 <div class="col-md-8">
                                     <input type="file" id="image" name="image" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <label for="project_photos" class="col-md-4">প্রজেক্টের অন্যান্য ছবিঃ </label>
+                                <div class="col-md-8">
+                                    <input type="file" id="project_photos" name="project_photos[]" class="form-control" accept="image/*" multiple />
                                 </div>
                             </div>
                             <div class="row mt-3">
