@@ -79,13 +79,13 @@
                                                 <img src="{{ asset('storage/' . $photo) }}" alt="Photo"
                                                     class="img-thumbnail"
                                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
-                                                <form
+                                                    <form
                                                     action="{{ route('project.photo.delete', ['project' => $project->id, 'index' => $index]) }}"
-                                                    method="POST">
+                                                    method="POST" style="position: absolute; top: 5px; right: 5px;">
                                                     @csrf
+                                                    @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"
-                                                        style="position: absolute; top: 5px; right: 5px;"
-                                                        onclick="return confirm('আপনি কি এই ছবি মুছে ফেলতে চান?')">
+                                                        onclick="return confirm('আপনি কি নিশ্চিতভাবে মুছে ফেলতে চান?')">
                                                         <i class="ph ph-trash"></i>
                                                     </button>
                                                 </form>

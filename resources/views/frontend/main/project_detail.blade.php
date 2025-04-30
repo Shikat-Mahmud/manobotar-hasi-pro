@@ -50,6 +50,56 @@
                         </div>
                     @endif
 
+                    <div
+                        class="et-blogs overflow-hidden pt-[30px] xl:py-[30px] md:py-[30px] relative z-[1] after:absolute">
+                        <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
+                            <!-- heading -->
+                            <div
+                                class="et-blogs-heading flex xs:flex-col justify-between items-center mb-[52px] xl:mb-[32px] lg:mb-[22px] gap-[15px]">
+                                <div class="left xs:text-center">
+                                    <h4
+                                        class="text-[30px] xs:text-[20px] xxs:text-[20px] text-etBlack">
+                                        <span>প্রজেক্টের ছবি সমূহ</span>
+                                    </h4>
+                                </div>
+
+                                <div class="right">
+                                    <div class="et-blogs-slider-nav flex gap-[16px] sm:gap-[12px]">
+                                        <button
+                                            class="prev border border-[#D9D9D9] rounded-full w-[60px] sm:w-[50px] h-[60px] sm:h-[50px] text-[18px] text-etBlack hover:bg-etBlue hover:border-etbg-etBlue hover:text-white">
+                                            <i class="fa-solid fa-arrow-left-long"></i>
+                                        </button>
+                                        <button
+                                            class="next border border-[#D9D9D9] rounded-full w-[60px] sm:w-[50px] h-[60px] sm:h-[50px] text-[18px] text-etBlack hover:bg-etBlue hover:border-etbg-etBlue hover:text-white">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="et-2-blogs-slider swiper p-[30px]">
+                                <div class="swiper-wrapper">
+
+                                    @foreach ($project->project_photos as $index => $photo)
+                                        <div class="swiper-slide group">
+                                            <div
+                                                class="et-blog bg-white relative group-[.swiper-slide-visible]:shadow-[0_4px_25px_rgba(0,0,0,0.06)] rounded-[12px] overflow-hidden">
+                                                <div class="et-blog__img relative overflow-hidden z-[1]">
+                                                    <img src="{{ asset('storage/' . $photo) }}" alt="Photo"
+                                                        class="w-full rounded-[12px] aspect-square object-cover transition duration-[400ms] group-hover:scale-105">
+                                                    <a href="{{ asset('storage/' . $photo) }}" data-fslightbox="gallery"
+                                                        class="inline-flex items-center justify-center w-[64px] aspect-square rounded-full bg-white text-[25px] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] opacity-0 group-hover:opacity-100 hover:text-etBlue">
+                                                        <i class="fa-plus fa-regular"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     @if (isset($otherProjects) && $otherProjects->count() > 0)
                         <div class="mb-[50px] mt-[50px]">
                             <h4
@@ -88,7 +138,7 @@
 
                     <!-- actions -->
                     <div class="border-y border-[#d9d9d9] py-[24px] flex items-center xxs:flex-col gap-[20px]">
-                        <span 
+                        <span
                             class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] hover:bg-etGray">সাহায্য
                             পাঠাতে চান?</span>
                         <div class="flex gap-[12px]">
