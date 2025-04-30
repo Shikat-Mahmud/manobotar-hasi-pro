@@ -30,7 +30,7 @@
                             </div>
                             @else
                             <div class="d-flex align-items-center justify-content-center flex-column">
-                                <img src="{{ asset('/') }}images/empty.jpg" alt="Photo" style="height: 200px;">
+                                <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="Photo" style="height: 200px;">
                                 <h5 class="mt-5 mb-5 text-center text-secondary">কোনো ছবি পাওয়া যায়নি!</h5>
                             </div>
                         @endif

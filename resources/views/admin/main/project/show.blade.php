@@ -21,7 +21,7 @@
                                     <img src="{{ asset('storage/' . $project->image) }}" alt="Main Image"
                                         style="height: 200px; border-radius: 10px;">
                                 @else
-                                    <img src="{{ asset('assets/images/no-image.png') }}" alt="No Image"
+                                    <img src="{{ asset('assets/images/user/avatar-2.jpg') }}" alt="No Image"
                                         style="height: 200px;">
                                 @endif
                             </div>
