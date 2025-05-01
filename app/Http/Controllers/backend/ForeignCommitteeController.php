@@ -118,7 +118,7 @@ class ForeignCommitteeController extends Controller
 
     public function allForeignCommittee()
     {
-        $committees = ForeignCommittee::orderBy('id', 'asc')->paginate(10);
+        $committees = ForeignCommittee::inRandomOrder()->paginate(10);
 
         return view('frontend.main.foreign_committee', compact('committees'));
     }

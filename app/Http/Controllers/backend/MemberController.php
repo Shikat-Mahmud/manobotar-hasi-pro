@@ -90,7 +90,7 @@ class MemberController extends Controller
 
     public function allMembers()
     {
-        $members = Member::orderBy('id', 'asc')->paginate(20);
+        $members = Member::inRandomOrder()->paginate(20);
 
         return view('frontend.main.member', compact('members'));
     }
