@@ -42,7 +42,7 @@
                             <li><a href="{{ route('advisers') }}">উপদেষ্টা পরিষদ</a></li>
                             <li><a href="{{ route('all.committee') }}">কার্যকরী পরিষদ</a></li>
                             <li><a href="{{ route('all.foreign') }}">প্রবাসী পরিষদ</a></li>
-                            <li><a href="{{ route('all.member') }}">কমিটি সদস্যগণ</a></li>
+                            <li><a href="{{ route('all.member') }}">ফাউন্ডেশনের সদস্যগণ</a></li>
                         </ul>
                     </li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>

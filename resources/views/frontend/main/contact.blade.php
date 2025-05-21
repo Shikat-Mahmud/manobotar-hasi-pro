@@ -81,8 +81,8 @@
 
                 <!-- photo cover -->
                 <div class="relative">
-                    @if (isset($event->image))
-                        <img src="{{ asset('storage/' . $event->image) }}" alt="image cover" class="w-full">
+                    @if (isset($about->image))
+                        <img src="{{ asset('storage/' . $about->image) }}" alt="image cover" class="w-full">
                     @else
                         <img src="{{ asset('frontend/img/contact-video-cover.jpg') }}" alt="image cover"
                             class="w-full">

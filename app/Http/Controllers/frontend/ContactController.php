@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\AboutUs;
 use App\Models\Contact;
-use App\Models\Event;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -12,7 +12,8 @@ class ContactController extends Controller
     public function index()
     {
         $settings = generalSettings();
-        return view('frontend.main.contact', compact('settings'));
+        $about = AboutUs::latest()->first();
+        return view('frontend.main.contact', compact('settings', 'about'));
     }
 
     public function store(Request $request)
