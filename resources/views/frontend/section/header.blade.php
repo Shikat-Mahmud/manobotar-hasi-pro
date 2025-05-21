@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <li class="has-sub-menu relative">
-                        <a role="button">কমিটি <i class="fa fa-angle-down"></i></a>
+                        <a role="button">আমাদের টিম সমূহ <i class="fa fa-angle-down"></i></a>
 
                         <ul class="et-header-submenu">
                             <li><a href="{{ route('advisers') }}">উপদেষ্টা পরিষদ</a></li>
