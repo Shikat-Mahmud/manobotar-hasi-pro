@@ -30,7 +30,7 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-warning order-card">
                         <div class="card-body">
-                            <h2 class="text-white">মোট কমিটি সদস্য</h2>
+                            <h2 class="text-white">মোট সদস্য</h2>
                             <h2 class="text-end text-white"><i
                                     class="ph ph-users-three float-start"></i><span>{{ $totalCommittee }}</span></h2>
                             <!-- <p class="m-b-0">This Month<span class="float-end">$5,032</span></p> -->
@@ -106,7 +106,7 @@
                 <div class="col-sm-12">
                     <div class="card table-card">
                         <div class="card-header">
-                            <h5>Recent Student Registration</h5>
+                            <h5>সর্বশেষ রক্তদাতা রেজিস্ট্রেশন</h5>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">

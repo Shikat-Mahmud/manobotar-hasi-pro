@@ -20,7 +20,7 @@ return new class extends Migration
             $table->datetime('stablished_date')->nullable();
             $table->longText('description')->nullable();
             $table->string('location')->nullable();
-            $table->string('other_info')->nullable();
+            $table->longText('other_info')->nullable();
             $table->timestamps();
         });
     }

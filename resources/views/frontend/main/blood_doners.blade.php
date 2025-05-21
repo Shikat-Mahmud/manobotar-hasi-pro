@@ -101,10 +101,10 @@
                             <div class="w-[168px]">
                                 <div class="overflow-hidden">
                                     @if (isset($doner->photo))
-                                        <img src="{{ asset('storage/' . $doner->photo) }}" alt="Guest Image"
+                                        <img src="{{ asset('storage/' . $doner->photo) }}" alt="Image"
                                             class="rounded-[6px] w-[168px] aspect-square" style="object-fit: cover;">
                                     @else
-                                        <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}" alt="Guest Image"
+                                        <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}" alt="Image"
                                             class="rounded-[6px] w-[168px] aspect-square">
                                     @endif
                                 </div>
@@ -159,12 +159,12 @@
                                         <div class="w-[168px]">
                                             <div class="overflow-hidden">
                                                 @if (isset($doner->photo))
-                                                    <img src="{{ asset('storage/' . $doner->photo) }}" alt="Students Image"
+                                                    <img src="{{ asset('storage/' . $doner->photo) }}" alt="Image"
                                                         class="rounded-[6px] w-[168px] aspect-square"
                                                         style="object-fit: cover;">
                                                 @else
                                                     <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}"
-                                                        alt="Students Image" class="rounded-[6px] w-[168px] aspect-square">
+                                                        alt="Image" class="rounded-[6px] w-[168px] aspect-square">
                                                 @endif
                                             </div>
                                             <h5 class="font-semibold text-[20px] pt-[10px] text-etBlack">

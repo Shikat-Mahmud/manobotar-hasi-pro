@@ -80,7 +80,7 @@
                                 <div class="et-2-blogs-slider swiper p-[30px]">
                                     <div class="swiper-wrapper">
 
-                                        @foreach ($project->project_photos as $index => $photo)
+                                        @foreach (collect($project->project_photos)->shuffle() as $index => $photo)
                                             <div class="swiper-slide group">
                                                 <div
                                                     class="et-blog bg-white relative group-[.swiper-slide-visible]:shadow-[0_4px_25px_rgba(0,0,0,0.06)] rounded-[12px] overflow-hidden">
