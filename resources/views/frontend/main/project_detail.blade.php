@@ -109,7 +109,7 @@
                             </h4>
 
                             <div
-                                class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
+                                class="p-[20px] lg:p-[20px] flex flex-wrap sm:justify-center gap-x-[30px] gap-y-[30px] mb-[30px]" style="justify-content: space-around;">
                                 @foreach ($otherProjects as $project)
                                     <!-- single project card -->
                                     <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[20px] relative group"
