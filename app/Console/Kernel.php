@@ -19,7 +19,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // You can add other scheduled commands here as needed
-        $schedule->command('reactivate:blood-doners')->daily();
+        // $schedule->command('app:reactivate-blood-doners')->daily();
+        $schedule->command('app:reactivate-blood-doners')->everyMinute();
     }
 
     protected function commands(): void

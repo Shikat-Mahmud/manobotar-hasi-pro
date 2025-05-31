@@ -26,6 +26,8 @@ class ReactivateBloodDoners extends Command
      */
     public function handle()
     {
+        \Log::info('Reactivate ran at ' . now());
+        
         BloodDoner::where('status', 0)
             ->whereNotNull('donated_at')
             ->where('donated_at', '<=', now()->subDays(90))
