@@ -59,29 +59,32 @@
                                 আমাদের প্রজেক্ট সমূহ
                             </h4>
 
-                            <div
-                                class="p-[20px] lg:p-[20px] flex flex-wrap sm:justify-center gap-x-[30px] gap-y-[30px] mb-[30px]" style="justify-content: space-around;">
+                            <div class="p-[20px] lg:p-[20px] flex flex-wrap sm:justify-center gap-x-[30px] gap-y-[30px] mb-[30px]"
+                                style="justify-content: space-around;">
                                 @foreach ($projects as $project)
                                     <!-- single project card -->
-                                    <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[20px] relative group"
-                                        style="background-color: #f0f4ff;">
-                                        <div class="w-[180px]">
-                                            <div class="overflow-hidden rounded-[6px]">
-                                                @if (isset($project->image))
-                                                    <img src="{{ asset('storage/' . $project->image) }}"
-                                                        alt="{{ $project->name }}"
-                                                        class="rounded-[6px] w-[180px] aspect-square transition-transform duration-300 group-hover:scale-105"
-                                                        style="object-fit: cover;">
-                                                @else
-                                                    <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}"
-                                                        alt="Default Image" class="rounded-[6px] w-[180px] aspect-square">
-                                                @endif
+                                    <a href="{{ route('project.details', $project->id) }}">
+                                        <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[20px] relative group"
+                                            style="background-color: #f0f4ff;">
+                                            <div class="w-[180px]">
+                                                <div class="overflow-hidden rounded-[6px]">
+                                                    @if (isset($project->image))
+                                                        <img src="{{ asset('storage/' . $project->image) }}"
+                                                            alt="{{ $project->name }}"
+                                                            class="rounded-[6px] w-[180px] aspect-square transition-transform duration-300 group-hover:scale-105"
+                                                            style="object-fit: cover;">
+                                                    @else
+                                                        <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}"
+                                                            alt="Default Image"
+                                                            class="rounded-[6px] w-[180px] aspect-square">
+                                                    @endif
+                                                </div>
+                                                <h5 class="font-bold text-[18px] pt-[10px] text-etBlack text-center">
+                                                    {{ $project->name }}
+                                                </h5>
                                             </div>
-                                            <h5 class="font-bold text-[18px] pt-[10px] text-etBlack text-center">
-                                                {{ $project->name }}
-                                            </h5>
                                         </div>
-                                    </div>
+                                    </a>
                                 @endforeach
                             </div>
                         </div>
@@ -89,7 +92,7 @@
 
                     <!-- actions -->
                     <div class="border-y border-[#d9d9d9] py-[24px] flex items-center xxs:flex-col gap-[20px]">
-                        <span 
+                        <span
                             class="inline-flex items-center h-[50px] rounded-full bg-etBlue px-[20px] text-[17px] font-medium text-white gap-[10px] hover:bg-etGray">সাহায্য
                             পাঠাতে চান?</span>
                         <div class="flex gap-[12px]">
