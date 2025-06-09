@@ -26,17 +26,17 @@ class ReactivateBloodDoners extends Command
      */
     public function handle()
     {
-        \Log::info('Reactivate ran at ' . now());
+        // \Log::info('Reactivate ran at ' . now());
         
-        BloodDoner::where('status', 0)
-            ->whereNotNull('donated_at')
-            ->where('donated_at', '<=', now()->subDays(90))
-            ->update([
-                'status' => 1,
-                'donated_at' => null,
-            ]);
+        // BloodDoner::where('status', 0)
+        //     ->whereNotNull('donated_at')
+        //     ->where('donated_at', '<=', now()->subDays(90))
+        //     ->update([
+        //         'status' => 1,
+        //         'donated_at' => null,
+        //     ]);
 
-        $this->info('Reactivated eligible blood donors.');
+        // $this->info('Reactivated eligible blood donors.');
     }
 
 }
