@@ -63,6 +63,12 @@
                                 </div>
                             </div>
                             <div class="row mt-3">
+                                <label for="donated_at" class="col-md-4">ডোনেশনের তারিখঃ </label>
+                                <div class="col-md-8">
+                                    <input type="date" id="donated_at" name="donated_at" value="{{ old('donated_at', $doner->donated_at ? \Illuminate\Support\Carbon::parse($doner->donated_at)->format('Y-m-d') : null) }}" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
                                 <label for="photo" class="col-md-4">ছবিঃ </label>
                                 <div class="col-md-8">
                                     <input type="file" id="photo" name="photo" class="form-control" />

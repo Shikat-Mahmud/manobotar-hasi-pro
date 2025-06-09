@@ -105,6 +105,7 @@ class BloodDonerController extends Controller
                 'address' => 'nullable|max:255',
                 'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
                 'status' => 'required|boolean',
+                'donated_at' => 'nullable|date',
             ]);
 
             $doner = BloodDoner::find($id);
@@ -125,6 +126,7 @@ class BloodDonerController extends Controller
             }
 
             $doner->status = $request->status;
+            $doner->donated_at = $request->status != 1 ? ($request->donated_at ?? $doner->donated_at) : null;
             $doner->save();
 
             return redirect()->route('blood-doner.list')->with('success', 'রক্তদাতা আপডেট করা হয়েছে!');
