@@ -20,13 +20,22 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        BloodDoner::where('status', 0)
-            ->whereNotNull('donated_at')
-            ->where('donated_at', '<=', now()->subDays(90))
-            ->update([
-                'status' => 1,
-                'donated_at' => null,
-            ]
-        );
+        if (!\Cache::has('reactivate_blood_donors_ran_today')) {
+            \Log::info('Reactivate ran at ' . now());
+
+            BloodDoner::where('status', 0)
+                ->whereNotNull('donated_at')
+                ->where('donated_at', '<=', now()->subDays(90))
+                ->update(
+                    [
+                        'status' => 1,
+                        'donated_at' => null,
+                    ]
+                );
+
+            \Cache::put('reactivate_blood_donors_ran_today', true, now()->endOfDay());
+
+            // \Log::info('Reactivated eligible blood donors.');
+        }
     }
 }
