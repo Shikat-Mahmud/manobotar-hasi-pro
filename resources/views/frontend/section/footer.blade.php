@@ -221,7 +221,7 @@
                                 <span class="txt">ছবি গ্যালারি</span>
                             </a>
                         </li> --}}
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('our.doner') }}"
                                 class="flex items-center gap-[10px] hover:text-etBlue group">
                                 <span class="icon">
@@ -234,7 +234,7 @@
                                 </span>
                                 <span class="txt">ডোনেশন</span>
                             </a>
-                        </li>
+                        </li> --}}
                         {{-- <li>
                             <a href="{{ route('contact') }}"
                                 class="flex items-center gap-[10px] hover:text-etBlue group">

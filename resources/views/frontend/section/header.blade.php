@@ -47,7 +47,7 @@
                     </li>
                     <li><a href="{{ route('blood-doners') }}">রক্তদাতা</a></li>
                     <li><a href="{{ route('gallery') }}">ছবি গ্যালারি</a></li>
-                    <li><a href="{{ route('our.doner') }}">ডোনেশন</a></li>
+                    {{-- <li><a href="{{ route('our.doner') }}">ডোনেশন</a></li> --}}
                     <li><a href="{{ route('contact') }}">যোগাযোগ</a></li>
                 </ul>
 
