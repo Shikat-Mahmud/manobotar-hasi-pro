@@ -60,7 +60,7 @@ class MemberController extends Controller
             // Validate the request
             $request->validate([
                 'name' => 'required|string|max:255',
-                'phone' => 'required|string|max:15|unique:members,phone',
+                'phone' => 'required|string|max:15|unique:members,phone,' . $id,
                 'address' => 'nullable|string|max:255',
                 'blood_group' => 'nullable|string|max:5',
             ]);

@@ -68,7 +68,7 @@ class ForeignCommitteeController extends Controller
             $request->validate([
                 'name' => 'required|string|max:255',
                 'position' => 'nullable|string|max:99',
-                'phone' => 'required|string|max:15|unique:foreign_committees,phone',
+                'phone' => 'required|string|max:15|unique:foreign_committees,phone,' . $id,
                 'email' => 'nullable|email|max:255',
                 'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5120',
                 'blood_group' => 'nullable|string|max:5',

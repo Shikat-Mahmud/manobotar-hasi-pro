@@ -26,19 +26,22 @@
                     class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
                     @foreach ($committees as $member)
                         <!-- single artist -->
-                        <div class="gap-[10px] pb-[15px] flex justify-center rounded-[12px] p-[30px] relative"
+                        <div class="gap-[10px] flex justify-center rounded-[12px] p-[15px] pb-[12px] relative"
                             style="background-color: #d3deff;">
-                            <div class="w-[168px]">
+                            <div class="w-[100px] xs:w-[120px] sm:w-[168px]">
                                 <div class="overflow-hidden">
                                     @if (isset($member->photo))
                                         <img src="{{ asset('storage/' . $member->photo) }}" alt="Guest Image"
-                                            class="rounded-[6px] w-[168px] aspect-square" style="object-fit: cover;">
+                                            class="rounded-[6px] w-full aspect-square object-cover">
                                     @else
                                         <img src="{{ asset('frontend/img/team_member_avatar.jpg') }}" alt="Guest Image"
-                                            class="rounded-[6px] w-[168px] aspect-square">
+                                            class="rounded-[6px] w-full aspect-square object-cover">
                                     @endif
                                 </div>
-                                <h5 class="font-semibold text-[20px] pt-[10px] text-etBlack">{{ $member->name }}</h5>
+                                <h5 class="text-[12px] sm:text-[20px] pt-[10px] text-etBlack text-start font-bold">
+                                    {{ $member->name }}
+                                </h5>
+                                <span class="text-etGray text-[10px] sm:text-[16px]">{{ $member->position }}</span>
                             </div>
                         </div>
                     @endforeach
