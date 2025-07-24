@@ -5083,6 +5083,14 @@ video {
     padding: 0px;
   }
 
+  .lg\:p-\[2px\] {
+    padding: 2px;
+  }
+
+  .lg\:p-\[10px\] {
+    padding: 10px;
+  }
+
   .lg\:p-\[16px\] {
     padding: 16px;
   }

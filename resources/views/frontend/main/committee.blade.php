@@ -23,7 +23,7 @@
             <div id="all" class="tabcontent" style="display: block;">
                 <h3 class="text-[24px] py-[16px]">কার্যকরী পরিষদের সদস্যগণ</h3>
                 <div
-                    class="p-[20px] lg:p-[20px] flex flex-wrap justify-start sm:justify-center gap-x-[30px] gap-y-[20px] mb-[30px]">
+                    class="p-[20px] lg:p-[2px] flex flex-wrap justify-start sm:justify-center gap-x-[20px] gap-y-[20px] mb-[30px]">
                     @foreach ($committees as $member)
                         <!-- single artist -->
                         <div class="gap-[10px] flex justify-center rounded-[12px] p-[15px] pb-[12px] relative"
